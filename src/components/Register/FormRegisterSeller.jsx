@@ -1,8 +1,8 @@
 import React from "react";
 
-const FormRegisterSeller = () => {
+const FormRegisterSeller = ({ handleChange, handleSubmit }) => {
 	return (
-		<form className="tab-content" id="v-pills-tabContent">
+		<form onSubmit={handleSubmit} className="tab-content" id="v-pills-tabContent">
 			<div
 				className="tab-pane fade show active"
 				id="v-pills-seller"
@@ -11,9 +11,10 @@ const FormRegisterSeller = () => {
 				<div className="row mt-4 my-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
+							onChange={handleChange}
 							type="text"
 							name="name"
-							id="name"
+							id="fullname"
 							placeholder="Name"
 							className="form-control"
 						/>
@@ -22,7 +23,8 @@ const FormRegisterSeller = () => {
 				<div className="row mt-3 my-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
-							type="text"
+							onChange={handleChange}
+							type="email"
 							name="email"
 							id="email"
 							placeholder="Email"
@@ -33,6 +35,7 @@ const FormRegisterSeller = () => {
 				<div className="row mt-3 my-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
+							onChange={handleChange}
 							type="text"
 							name="phone"
 							id="phoen"
@@ -44,8 +47,9 @@ const FormRegisterSeller = () => {
 				<div className="row mt-3 my-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
+							onChange={handleChange}
 							type="text"
-							name="store"
+							name="store_name"
 							id="store"
 							placeholder="Store name"
 							className="form-control"
@@ -55,6 +59,7 @@ const FormRegisterSeller = () => {
 				<div className="row mt-3 mb-5 justify-content-center">
 					<div className="col-lg-4">
 						<input
+							onChange={handleChange}
 							type="password"
 							name="password"
 							id="password"

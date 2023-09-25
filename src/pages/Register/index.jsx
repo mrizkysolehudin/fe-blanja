@@ -1,12 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assets/icons/shoppingBag.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import TabsCustomerSeller from "../../components/Global/TabsCustomerSeller";
 import FormRegisterCustomer from "../../components/Register/FormRegisterCustomer";
 import FormRegisterSeller from "../../components/Register/FormRegisterSeller";
+import { useDispatch, useSelector } from "react-redux";
+import { registerCustomerAction } from "../../redux/reducers/customer/registerCustomerSlice";
+import { registerSellerAction } from "../../redux/reducers/seller/registerSellerSlice";
 
 const RegisterPage = () => {
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+
 	const [isActive, setIsActive] = useState("customer");
+	const { isLoading, isCreated } = useSelector(
+		(state) => state.registerCustomer,
+	);
+
+	const [data, setData] = useState({
+		name: "",
+		email: "",
+		password: "",
+	});
+
+	const handleChange = (e) => {
+		setData({
+			...data,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		isActive === "customer" && dispatch(registerCustomerAction({ data }));
+		isActive === "seller" && dispatch(registerSellerAction({ data }));
+	};
+
+	useEffect(() => {
+		if (isCreated) {
+			navigate("/login");
+		}
+	}, [isLoading, isCreated, navigate]);
 
 	return (
 		<React.Fragment>
@@ -30,8 +65,18 @@ const RegisterPage = () => {
 						{/* Text End */}
 						<TabsCustomerSeller isActive={isActive} setIsActive={setIsActive} />
 
-						{isActive === "customer" && <FormRegisterCustomer />}
-						{isActive === "seller" && <FormRegisterSeller />}
+						{isActive === "customer" && (
+							<FormRegisterCustomer
+								handleChange={handleChange}
+								handleSubmit={handleSubmit}
+							/>
+						)}
+						{isActive === "seller" && (
+							<FormRegisterSeller
+								handleChange={handleChange}
+								handleSubmit={handleSubmit}
+							/>
+						)}
 
 						{/* Login Start */}
 						<div className="row">

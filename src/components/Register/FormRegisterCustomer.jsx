@@ -1,8 +1,8 @@
 import React from "react";
 
-const FormRegisterCustomer = () => {
+const FormRegisterCustomer = ({ handleChange, handleSubmit }) => {
 	return (
-		<form className="tab-content" id="v-pills-tabContent">
+		<form onSubmit={handleSubmit} className="tab-content" id="v-pills-tabContent">
 			<div
 				className="tab-pane fade show active"
 				id="v-pills-customer"
@@ -11,8 +11,9 @@ const FormRegisterCustomer = () => {
 				<div className="row mt-4 my-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
-							type="fullname"
-							name="fullname"
+							onChange={handleChange}
+							type="name"
+							name="name"
 							id="name"
 							placeholder="Name"
 							className="form-control"
@@ -22,7 +23,8 @@ const FormRegisterCustomer = () => {
 				<div className="row mt-3 my-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
-							type="text"
+							onChange={handleChange}
+							type="email"
 							name="email"
 							id="email"
 							placeholder="Email"
@@ -33,6 +35,7 @@ const FormRegisterCustomer = () => {
 				<div className="row mt-3 mb-5 justify-content-center">
 					<div className="col-lg-4">
 						<input
+							onChange={handleChange}
 							type="password"
 							name="password"
 							id="password"
