@@ -28,6 +28,11 @@ export const loginCustomerAction = createAsyncThunk(
 			localStorage.setItem("token", response.data.data.token);
 			localStorage.setItem("user_id", response.data.data.user_id);
 
+			const cookies = document.cookie;
+			const refreshToken = cookies.split("=")[1];
+
+			console.log("refreshToken", refreshToken);
+
 			Swal.fire({
 				title: "Login success",
 				text: "Congratulations! You are now logged in.",
