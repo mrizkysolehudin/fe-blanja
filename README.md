@@ -1,7 +1,7 @@
 <h1 align="center">Blanja Web Application</h1>
 
  <p align="center">
-    Discover Recipe & Delicious Food
+    <!--  -->
  </p>
 
 ### Built With

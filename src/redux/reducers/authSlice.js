@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import http from "../../helpers/http";
 import { baseUrl } from "../../helpers/baseUrl";
 import Swal from "sweetalert2";
+import httpJson from "../../helpers/http";
 
 const initialState = {
 	isLogout: false,
@@ -24,7 +24,7 @@ export const loginCustomerAction = createAsyncThunk(
 				return rejectWithValue("Please, input your email and password!");
 			}
 
-			const response = await http().post(`${baseUrl}/customer/login`, data);
+			const response = await httpJson().post(`${baseUrl}/customer/login`, data);
 			localStorage.setItem("token", response.data.data.token);
 			localStorage.setItem("user_id", response.data.data.user_id);
 
@@ -60,7 +60,7 @@ export const loginSellerAction = createAsyncThunk(
 				return rejectWithValue("Please, input your email and password!");
 			}
 
-			const response = await http().post(`${baseUrl}/seller/login`, data);
+			const response = await httpJson().post(`${baseUrl}/seller/login`, data);
 			localStorage.setItem("token", response.data.data.token);
 			localStorage.setItem("user_id", response.data.data.user_id);
 
