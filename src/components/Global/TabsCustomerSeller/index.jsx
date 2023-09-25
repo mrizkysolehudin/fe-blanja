@@ -18,7 +18,7 @@ const TabsCustomerSeller = ({ isActive, setIsActive }) => {
 						aria-controls="v-pills-customer"
 						aria-selected="true"
 						className={`btn ${
-							isActive == "customer"
+							isActive === "customer"
 								? "btn-danger"
 								: "btn-light border-secondary-subtle text-secondary"
 						}`}>
@@ -34,7 +34,7 @@ const TabsCustomerSeller = ({ isActive, setIsActive }) => {
 						aria-controls="v-pills-seller"
 						aria-selected="false"
 						className={`btn px-4 ${
-							isActive == "seller"
+							isActive === "seller"
 								? "btn-danger"
 								: "btn-light border-secondary-subtle text-secondary"
 						}`}>

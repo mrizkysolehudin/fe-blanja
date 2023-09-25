@@ -30,8 +30,8 @@ const RegisterPage = () => {
 						{/* Text End */}
 						<TabsCustomerSeller isActive={isActive} setIsActive={setIsActive} />
 
-						{isActive == "customer" && <FormRegisterCustomer />}
-						{isActive == "seller" && <FormRegisterSeller />}
+						{isActive === "customer" && <FormRegisterCustomer />}
+						{isActive === "seller" && <FormRegisterSeller />}
 
 						{/* Login Start */}
 						<div className="row">

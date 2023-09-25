@@ -30,8 +30,8 @@ const LoginPage = () => {
 					{/* Text End */}
 					<TabsCustomerSeller isActive={isActive} setIsActive={setIsActive} />
 
-					{isActive == "customer" && <FormLoginCustomer />}
-					{isActive == "seller" && <FormLoginSeller />}
+					{isActive === "customer" && <FormLoginCustomer />}
+					{isActive === "seller" && <FormLoginSeller />}
 
 					<div className="row">
 						<div className="col d-flex justify-content-center">
