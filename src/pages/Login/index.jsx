@@ -1,13 +1,47 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../assets/icons/shoppingBag.svg";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import FormLoginCustomer from "../../components/Login/FormLoginCustomer";
 import FormLoginSeller from "../../components/Login/FormLoginSeller";
 import TabsCustomerSeller from "../../components/Global/TabsCustomerSeller";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	loginCustomerAction,
+	loginSellerAction,
+} from "../../redux/reducers/authSlice";
 
 const LoginPage = () => {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const token = localStorage.getItem("token");
+	const { isLogin } = useSelector((state) => state.userAuth);
+
 	const [isActive, setIsActive] = useState("customer");
+	const [data, setData] = useState({
+		email: "",
+		password: "",
+	});
+
+	const handleChange = (e) => {
+		setData({
+			...data,
+			[e.target.name]: e.target.value,
+		});
+	};
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+
+		isActive === "customer" && dispatch(loginCustomerAction(data));
+		isActive === "seller" && dispatch(loginSellerAction(data));
+	};
+
+	useEffect(() => {
+		if (token) {
+			navigate("/");
+		}
+	}, [isLogin, navigate, token]);
 
 	return (
 		<React.Fragment>
@@ -30,8 +64,18 @@ const LoginPage = () => {
 					{/* Text End */}
 					<TabsCustomerSeller isActive={isActive} setIsActive={setIsActive} />
 
-					{isActive === "customer" && <FormLoginCustomer />}
-					{isActive === "seller" && <FormLoginSeller />}
+					{isActive === "customer" && (
+						<FormLoginCustomer
+							handleChange={handleChange}
+							handleSubmit={handleSubmit}
+						/>
+					)}
+					{isActive === "seller" && (
+						<FormLoginSeller
+							handleChange={handleChange}
+							handleSubmit={handleSubmit}
+						/>
+					)}
 
 					<div className="row">
 						<div className="col d-flex justify-content-center">

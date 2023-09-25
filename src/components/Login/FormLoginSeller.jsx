@@ -1,8 +1,8 @@
 import React from "react";
 
-const FormLoginSeller = () => {
+const FormLoginSeller = ({ handleChange, handleSubmit }) => {
 	return (
-		<form>
+		<form onSubmit={handleSubmit}>
 			<div
 				className="tab-pane fade show active"
 				id="v-pills-seller"
@@ -11,6 +11,7 @@ const FormLoginSeller = () => {
 				<div className="row mt-4 my-3 justify-content-center">
 					<div className="col-lg-4 ">
 						<input
+							onChange={handleChange}
 							type="email"
 							name="email"
 							id="email"
@@ -22,6 +23,7 @@ const FormLoginSeller = () => {
 				<div className="row mt-3 justify-content-center">
 					<div className="col-lg-4">
 						<input
+							onChange={handleChange}
 							type="password"
 							name="password"
 							id="password"
@@ -32,7 +34,9 @@ const FormLoginSeller = () => {
 				</div>
 				<div className="row mt-4 mb-4 justify-content-center">
 					<div className="col-lg-4 d-flex justify-content-center">
-						<button className="btn btn-danger rounded-pill w-100">Login</button>
+						<button type="submit" className="btn btn-danger rounded-pill w-100">
+							Login
+						</button>
 					</div>
 				</div>
 			</div>
