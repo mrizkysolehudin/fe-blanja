@@ -44,7 +44,7 @@ const LoginPage = () => {
 	}, [isLogin, navigate, token]);
 
 	return (
-		<React.Fragment>
+		<div id="page-login">
 			<div className="vh-100 d-flex align-items-center">
 				<div className="container">
 					{/* Logo Start */}
@@ -88,7 +88,7 @@ const LoginPage = () => {
 					{/* Register End */}
 				</div>
 			</div>
-		</React.Fragment>
+		</div>
 	);
 };
 

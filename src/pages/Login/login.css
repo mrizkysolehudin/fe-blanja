@@ -1,11 +1,11 @@
-.col h1 {
-  color: #db3022;
+#page-login .col h1 {
+	color: #db3022;
 }
-.title-p {
-  color: #222;
-  font-family: Metropolis;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+#page-login .title-p {
+	color: #222;
+	font-family: Metropolis;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
 }
