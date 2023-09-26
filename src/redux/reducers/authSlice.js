@@ -92,8 +92,15 @@ const authSlice = createSlice({
 	initialState,
 	reducers: {
 		logoutAction: (state) => {
-			localStorage.removeItem("token");
-			localStorage.removeItem("user_id");
+			localStorage.clear();
+			Swal.fire({
+				text: "Logout success",
+				icon: "success",
+			});
+
+			setTimeout(() => {
+				window.location.reload();
+			}, 1000);
 			state.isLogin = false;
 			state.token = null;
 			state.user_id = null;

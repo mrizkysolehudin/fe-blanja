@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./nav.css";
 import svgLogo from "../../../assets/profile/logo.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import svgDp from "../../../assets/profile/dp.svg";
-import Swal from "sweetalert2";
+import { useDispatch } from "react-redux";
+import { logoutAction } from "../../../redux/reducers/authSlice";
 
-const Navbar1 = () => {
-	const navigate = useNavigate();
-	const [isLogin, setIsLogin] = useState(true);
+const Navbar = () => {
+	const dispatch = useDispatch();
+
+	const [isLogin, setIsLogin] = useState(false);
+	const [isToggleOpen, setIsToggleOpen] = useState(false);
 
 	useEffect(() => {
 		const token = localStorage.getItem("token");
@@ -15,21 +18,7 @@ const Navbar1 = () => {
 		if (token) {
 			setIsLogin(true);
 		}
-	}, []);
-
-	const handleLogout = () => {
-		localStorage.removeItem("token");
-		Swal.fire({
-			text: "Logout success",
-			icon: "success",
-		});
-
-		navigate("/");
-
-		setTimeout(() => {
-			window.location.reload();
-		}, 1000);
-	};
+	}, [isLogin]);
 
 	return (
 		<div
@@ -85,7 +74,32 @@ const Navbar1 = () => {
 					<div>
 						<i className="bi bi-envelope fs-4 text-gray"></i>
 					</div>
-					<img src={svgDp} alt="" style={{ width: "32px", marginRight: "15%" }} />
+
+					<img
+						onClick={() => setIsToggleOpen(!isToggleOpen)}
+						src={svgDp}
+						alt=""
+						style={{ width: "32px", marginRight: "15%" }}
+					/>
+
+					{isToggleOpen && (
+						<div
+							style={{
+								position: "absolute",
+								marginTop: "3.6vw",
+								marginRight: "4vw",
+								padding: "5px 5px 5px",
+								backgroundColor: "rgba(210, 210, 210, 0.6)",
+								borderRadius: 6,
+							}}>
+							<button
+								onClick={() => dispatch(logoutAction())}
+								className="btn btn-secondary py-1"
+								style={{ fontSize: 9 }}>
+								logout
+							</button>
+						</div>
+					)}
 				</div>
 			) : (
 				<div
@@ -110,4 +124,4 @@ const Navbar1 = () => {
 	);
 };
 
-export default Navbar1;
+export default Navbar;

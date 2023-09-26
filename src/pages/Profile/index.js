@@ -1,6 +1,6 @@
 import React from "react";
 import "./profile.css";
-import Navbar1 from "../../components/Global/Navbar/nav1";
+import Navbar from "../../components/Global/Navbar/index";
 import FilterModal from "../../components/Global/Navbar/filter_modal";
 
 import svgDp from "../../assets/profile/dp.svg";
@@ -12,7 +12,7 @@ import svgDpLarge from "../../assets/profile/dp-large.svg";
 const ProfilePage = () => {
 	return (
 		<div id="page-profile" className="container-float">
-			<Navbar1 />
+			<Navbar />
 			<div className="d-flex flex-row height-content">
 				{/* Sidebar */}
 				<div style={{ width: "29%", marginTop: "11%" }}>
