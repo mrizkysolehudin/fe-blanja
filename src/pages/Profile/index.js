@@ -14,7 +14,9 @@ const ProfilePage = () => {
 			<Navbar />
 			<div className="d-flex flex-row height-content">
 				{/* Sidebar */}
-				<div style={{ width: "29%", marginTop: "11%" }}>
+				<div
+					style={{ width: "29%", marginTop: "11%" }}
+					className="d-none d-md-block">
 					<div className="sidebar2">
 						<div className="centering">
 							<img
@@ -55,11 +57,11 @@ const ProfilePage = () => {
 				</div>
 
 				{/* Content */}
-				<div className="bg-lightGray" style={{ width: "71%" }}>
-					<div className="border bg-white content">
-						<div className="row mx-3" style={{ marginTop: "3.5%" }}>
-							<div className="col">
-								<h5 className="fw-bold">My Profile</h5>
+				<div id="content-profile" className="bg-lightGray mt-5 mt-sm-4 mt-xl-0">
+					<div className="border bg-white content ">
+						<div className="row mx-3 " style={{ marginTop: "3.5%" }}>
+							<div className="col ">
+								<h5 className="fw-bold ">My Profile</h5>
 								<p className="fs-09 text-gray2">Manage your profile Information</p>
 								<hr />
 							</div>
