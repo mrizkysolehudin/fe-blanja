@@ -157,28 +157,29 @@ const FormProfile = ({
 							<div className="d-flex flex-row gap-3">
 								<select
 									className="form-select fs-09 text-gray2 py-2"
-									aria-label="Default select example">
-									<option selected="" value={1}>
-										1
-									</option>
+									aria-label="Default select example"
+									defaultValue={1}>
+									<option value={1}>1</option>
 									<option value={2}>2</option>
-									<option value={4}>3</option>
+									<option value={3}>3</option>
 									<option value={31}>31</option>
 								</select>
+
 								<select
 									className="form-select fs-09 text-gray2 py-2"
-									aria-label="Default select example">
-									<option selected="" value="Januari">
-										Januari
-									</option>
+									aria-label="Default select example"
+									defaultValue="Januari">
+									<option value="Januari">Januari</option>
 									<option value="Februari">Februari</option>
 									<option value="Maret">Maret</option>
 									<option value="April">April</option>
 								</select>
+
 								<select
 									className="form-select fs-09 text-gray2 py-2"
-									aria-label="Default select example">
-									<option selected="">1990</option>
+									aria-label="Default select example"
+									defaultValue={1990}>
+									<option value={1990}>1990</option>
 									<option value={1991}>1991</option>
 									<option value={1992}>1992</option>
 									<option value={1993}>1993</option>
