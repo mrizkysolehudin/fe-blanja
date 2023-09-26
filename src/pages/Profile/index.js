@@ -16,6 +16,7 @@ const ProfilePage = () => {
 	const currentUser = useSelector((state) => state.getOneCustomer.data);
 	const { isLoading, isEdited } = useSelector((state) => state.editCustomer);
 
+	const [openTab, setOpenTab] = useState("my_account");
 	const [image, setImage] = useState("");
 	const [showImage, setShowImage] = useState("");
 	const [data, setData] = useState({
@@ -78,29 +79,36 @@ const ProfilePage = () => {
 			<Navbar />
 			<div className="d-flex flex-row height-content">
 				{/* Sidebar */}
-				<Sidebar />
+				<Sidebar
+					currentUser={currentUser}
+					setOpenTab={setOpenTab}
+					openTab={openTab}
+				/>
 
 				{/* Content */}
-				<div id="content-profile" className="bg-lightGray mt-5 mt-sm-4 mt-xl-0">
-					<div className="border bg-white content ">
-						<div className="row mx-3 " style={{ marginTop: "3.5%" }}>
-							<div className="col ">
-								<h5 className="fw-bold ">My Profile</h5>
-								<p className="fs-09 text-gray2">Manage your profile Information</p>
-								<hr />
+				{openTab === "my_account" && (
+					<div id="content-profile" className="bg-lightGray mt-5 mt-sm-4 mt-xl-0">
+						<div className="border bg-white content ">
+							<div className="row mx-3 " style={{ marginTop: "3.5%" }}>
+								<div className="col ">
+									<h5 className="fw-bold ">My Profile</h5>
+									<p className="fs-09 text-gray2">Manage your profile Information</p>
+									<hr />
+								</div>
 							</div>
-						</div>
 
-						<FormProfile
-							data={data}
-							isLoading={isLoading}
-							showImage={showImage}
-							handleChangeImage={handleChangeImage}
-							handleChange={handleChange}
-							handleSubmit={handleSubmit}
-						/>
+							<FormProfile
+								data={data}
+								isLoading={isLoading}
+								showImage={showImage}
+								handleChangeImage={handleChangeImage}
+								handleChange={handleChange}
+								handleSubmit={handleSubmit}
+								image={image}
+							/>
+						</div>
 					</div>
-				</div>
+				)}
 			</div>
 
 			<FilterModal />

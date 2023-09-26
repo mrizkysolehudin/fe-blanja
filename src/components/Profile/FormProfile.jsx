@@ -7,6 +7,7 @@ const FormProfile = ({
 	handleChange,
 	handleSubmit,
 	isLoading,
+	image,
 }) => {
 	return (
 		<form
@@ -16,9 +17,9 @@ const FormProfile = ({
 			<div className="col-flexauto form-profile">
 				{/* If Screen < 768 */}
 				<div className="update-image">
-					{showImage || data.image ? (
+					{showImage || image ? (
 						<img
-							src={showImage ?? data.image}
+							src={showImage ?? image}
 							alt=""
 							width="110px"
 							height="110px"
