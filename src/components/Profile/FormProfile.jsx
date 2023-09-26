@@ -112,11 +112,13 @@ const FormProfile = ({
 							style={{ width: "67%" }}>
 							<div className="form-check form-check-inline ms-3">
 								<input
+									onChange={handleChange}
 									className="form-check-input"
 									type="radio"
 									name="gender"
-									id="laki-laki"
-									defaultValue="Laki-laki"
+									id="male"
+									value="male"
+									checked={data.gender === "male"}
 								/>
 								<label
 									className="form-check-label fs-09 text-gray2"
@@ -126,11 +128,13 @@ const FormProfile = ({
 							</div>
 							<div className="form-check form-check-inline">
 								<input
+									onChange={handleChange}
 									className="form-check-input"
 									type="radio"
 									name="gender"
-									id="perempuan"
-									defaultValue="Perempuan"
+									id="female"
+									value="female"
+									checked={data.gender === "female"}
 								/>
 								<label
 									className="form-check-label fs-09 text-gray2"
