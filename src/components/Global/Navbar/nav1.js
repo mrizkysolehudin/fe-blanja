@@ -1,19 +1,45 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "./nav.css";
 import svgLogo from "../../../assets/profile/logo.svg";
+import { Link, useNavigate } from "react-router-dom";
+import svgDp from "../../../assets/profile/dp.svg";
+import Swal from "sweetalert2";
 
 const Navbar1 = () => {
 	const navigate = useNavigate();
+	const [isLogin, setIsLogin] = useState(true);
+
+	useEffect(() => {
+		const token = localStorage.getItem("token");
+
+		if (token) {
+			setIsLogin(true);
+		}
+	}, []);
+
+	const handleLogout = () => {
+		localStorage.removeItem("token");
+		Swal.fire({
+			text: "Logout success",
+			icon: "success",
+		});
+
+		navigate("/");
+
+		setTimeout(() => {
+			window.location.reload();
+		}, 1000);
+	};
+
 	return (
 		<div
 			className="position-absolute bg-white d-flex flex-row align-items-center nav-shadow"
 			style={{ width: "100%", height: "15%" }}>
 			<div className="d-flex flex-row" style={{ width: "70%" }}>
 				<div className="ms-nav">
-					<a href="#">
+					<Link to="/">
 						<img src={svgLogo} alt="Logo" />
-					</a>
+					</Link>
 				</div>
 
 				<form
@@ -46,23 +72,40 @@ const Navbar1 = () => {
 			</div>
 
 			{/* Navbar sebelum login */}
-			<div
-				className="d-flex flex-row justify-content-end gap-3 me-nav"
-				style={{ width: "30%" }}>
-				<a href="#" className="me-4 hidden">
-					<i className="bi bi-cart2 fs-4 text-gray"></i>
-				</a>
-				<form action="">
-					<button type="button" className="btn-login">
-						Login
-					</button>
-				</form>
-				<form action="">
-					<button type="button" className="btn-signup">
-						Signup
-					</button>
-				</form>
-			</div>
+			{isLogin ? (
+				<div
+					className="d-flex flex-row justify-content-end gap-nav"
+					style={{ width: "30%" }}>
+					<Link to="/cart">
+						<i className="bi bi-cart2 fs-4 text-gray"></i>
+					</Link>
+					<div>
+						<i className="bi bi-bell fs-4 text-gray"></i>
+					</div>
+					<div>
+						<i className="bi bi-envelope fs-4 text-gray"></i>
+					</div>
+					<img src={svgDp} alt="" style={{ width: "32px", marginRight: "15%" }} />
+				</div>
+			) : (
+				<div
+					className="d-flex flex-row justify-content-end gap-3 me-nav"
+					style={{ width: "30%" }}>
+					<Link to="/cart" className="me-4 hidden">
+						<i className="bi bi-cart2 fs-4 text-gray"></i>
+					</Link>
+					<div>
+						<Link id="btn-login" to="/login" type="button" className="btn-login">
+							Login
+						</Link>
+					</div>
+					<div>
+						<Link id="btn-signup" to="/register" type="button" className="btn-signup">
+							Signup
+						</Link>
+					</div>
+				</div>
+			)}
 		</div>
 	);
 };

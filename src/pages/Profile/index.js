@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./profile.css";
 import Navbar1 from "../../components/Global/Navbar/nav1";
-import Navbar2 from "../../components/Global/Navbar/nav2";
 import FilterModal from "../../components/Global/Navbar/filter_modal";
 
 import svgDp from "../../assets/profile/dp.svg";
@@ -12,13 +10,9 @@ import svgIconMyOrder from "../../assets/profile/icon-myorder.svg";
 import svgDpLarge from "../../assets/profile/dp-large.svg";
 
 const ProfilePage = () => {
-	const navigate = useNavigate();
 	return (
 		<div id="page-profile" className="container-float">
 			<Navbar1 />
-			{/* or */}
-			{/* <Navbar2 /> */}
-
 			<div className="d-flex flex-row height-content">
 				{/* Sidebar */}
 				<div style={{ width: "29%", marginTop: "11%" }}>
@@ -76,7 +70,7 @@ const ProfilePage = () => {
 							<div className="col-flexauto form-profile">
 								{/* If Screen < 768 */}
 								<div className="update-image">
-									<img src={svgDpLarge} alt="" style={{ width: "110px" }} />
+									<img src={svgDpLarge} alt="" width="110px" />
 									<button type="button" className="btn-selectImage">
 										Select Image
 									</button>
@@ -101,27 +95,12 @@ const ProfilePage = () => {
 										</div>
 										<div className="col-flexauto" style={{ width: "6%" }}></div>
 									</div>
-
-									{/* ... (other form elements) ... */}
-
-									<div className="row" style={{ height: "47px" }}>
-										<div className="col-flexauto d-flex flex-row justify-content-end align-items-center p-0 width-personal">
-											<label htmlFor="name" className="fs-09 text-gray2"></label>
-										</div>
-										<div className="col-flexauto" style={{ width: "3%" }}></div>
-										<div className="col-flexauto" style={{ width: "67%" }}>
-											<button type="button" className="btn-save">
-												Save
-											</button>
-										</div>
-										<div className="col-flexauto" style={{ width: "6%" }}></div>
-									</div>
 								</form>
 							</div>
 
 							{/* Image */}
 							<div className="change-image">
-								<img src={svgDpLarge} alt="" style={{ width: "110px" }} />
+								<img src={svgDpLarge} alt="" width="110px" />
 								<button type="button" className="btn-selectImage">
 									Select Image
 								</button>
