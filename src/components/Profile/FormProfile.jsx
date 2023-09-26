@@ -1,16 +1,45 @@
 import React from "react";
-import svgDpLarge from "../../assets/profile/dp-large.svg";
 
-const FormProfile = () => {
+const FormProfile = ({
+	data,
+	showImage,
+	handleChangeImage,
+	handleChange,
+	handleSubmit,
+	isLoading,
+}) => {
 	return (
-		<form className="row" style={{ margin: "1rem 1.7rem" }}>
+		<form
+			onSubmit={handleSubmit}
+			className="row"
+			style={{ margin: "1rem 1.7rem" }}>
 			<div className="col-flexauto form-profile">
 				{/* If Screen < 768 */}
 				<div className="update-image">
-					<img src={svgDpLarge} alt="" width="110px" />
+					{showImage || data.image ? (
+						<img
+							src={showImage ?? data.image}
+							alt=""
+							width="110px"
+							height="110px"
+							style={{ borderRadius: 9999, objectFit: "cover" }}
+						/>
+					) : (
+						<img
+							src="https://res.cloudinary.com/dskltx6xi/image/upload/v1694509756/mama_recipe/users/blank_dd1daa.png"
+							alt=""
+							width="110px"
+							height="110px"
+							style={{ borderRadius: 9999, objectFit: "cover" }}
+						/>
+					)}
 					<div className="btn-selectImage position-relative d-flex flex-column justify-content-center align-items-center">
 						<p className="mt-3">Select image</p>
-						<input type="file" className="stretched-link opacity-0" />
+						<input
+							type="file"
+							onChange={handleChangeImage}
+							className="stretched-link opacity-0"
+						/>
 					</div>
 				</div>
 				{/* ---------------- */}
@@ -24,7 +53,13 @@ const FormProfile = () => {
 						</div>
 						<div className="col-flexauto" style={{ width: "3%" }}></div>
 						<div className="col-flexauto" style={{ width: "67%" }}>
-							<input type="text" className="px-3" id="name" value="Johanes Mikael" />
+							<input
+								type="text"
+								className="px-3"
+								name="name"
+								onChange={handleChange}
+								value={data.name}
+							/>
 						</div>
 						<div className="col-flexauto" style={{ width: "6%" }}></div>
 					</div>
@@ -40,8 +75,9 @@ const FormProfile = () => {
 							<input
 								type="email"
 								className="px-3"
-								id="name"
-								defaultValue="johanes@gmail.com"
+								name="email"
+								onChange={handleChange}
+								value={data.email}
 							/>
 						</div>
 						<div className="col-flexauto" style={{ width: "6%" }} />
@@ -49,12 +85,18 @@ const FormProfile = () => {
 					<div className="row mb-4" style={{ height: "47px" }}>
 						<div className="col-flexauto d-flex flex-row justify-content-end align-items-center p-0 width-personal">
 							<label htmlFor="name" className="fs-09 text-gray2">
-								Phone Number
+								Phone number
 							</label>
 						</div>
 						<div className="col-flexauto" style={{ width: "3%" }} />
 						<div className="col-flexauto" style={{ width: "67%" }}>
-							<input type="number" className="px-3" id="name" />
+							<input
+								type="number"
+								className="px-3"
+								name="phone"
+								onChange={handleChange}
+								value={data.phone}
+							/>
 						</div>
 						<div className="col-flexauto" style={{ width: "6%" }} />
 					</div>
@@ -146,8 +188,8 @@ const FormProfile = () => {
 						</div>
 						<div className="col-flexauto" style={{ width: "3%" }} />
 						<div className="col-flexauto" style={{ width: "67%" }}>
-							<button type="button" className="btn-save">
-								Save
+							<button disabled={isLoading} type="submit" className="btn-save">
+								{isLoading ? "loading..." : "save"}
 							</button>
 						</div>
 						<div className="col-flexauto" style={{ width: "6%" }} />
@@ -157,11 +199,31 @@ const FormProfile = () => {
 
 			{/* Image */}
 			<div className="change-image">
-				<img src={svgDpLarge} alt="" width="110px" />
+				{showImage || data.image ? (
+					<img
+						src={showImage ?? data.image}
+						alt=""
+						width="110px"
+						height="110px"
+						style={{ borderRadius: 9999, objectFit: "cover" }}
+					/>
+				) : (
+					<img
+						src="https://res.cloudinary.com/dskltx6xi/image/upload/v1694509756/mama_recipe/users/blank_dd1daa.png"
+						alt=""
+						width="110px"
+						height="110px"
+						style={{ borderRadius: 9999, objectFit: "cover" }}
+					/>
+				)}
 
 				<div className="btn-selectImage position-relative d-flex flex-column justify-content-center align-items-center">
 					<p className="mt-3">Select image</p>
-					<input type="file" className="stretched-link opacity-0" />
+					<input
+						type="file"
+						onChange={handleChangeImage}
+						className="stretched-link opacity-0"
+					/>
 				</div>
 			</div>
 		</form>

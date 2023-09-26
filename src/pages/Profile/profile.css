@@ -11,6 +11,10 @@
 	font-family: "Metropolis" !important;
 }
 
+#page-profile .btn-save:disabled {
+	opacity: 0.9;
+}
+
 #page-profile .fs-09 {
 	font-size: 0.9rem !important;
 }

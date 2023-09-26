@@ -26,7 +26,7 @@ export const loginCustomerAction = createAsyncThunk(
 
 			const response = await httpJson().post(`${baseUrl}/customer/login`, data);
 			localStorage.setItem("token", response.data.data.token);
-			localStorage.setItem("user_id", response.data.data.user_id);
+			localStorage.setItem("user_id", response.data.data.id);
 
 			const cookies = document.cookie;
 			const refreshToken = cookies.split("=")[1];
