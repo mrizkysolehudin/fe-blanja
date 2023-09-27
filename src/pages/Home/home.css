@@ -1,0 +1,97 @@
+.navbar {
+  position: absolute;
+  margin-top: 3%;
+}
+.carousel {
+  margin-top: 2%;
+}
+
+.title-category h1 {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 6%;
+}
+.title-category p {
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 6%;
+}
+.category1 {
+  border-radius: 8px;
+  background: #cc0b04;
+}
+.category2 {
+  border-radius: 8px;
+  background: #1c3391;
+}
+.category3 {
+  border-radius: 8px;
+  background: #f67b02;
+}
+.category4 {
+  border-radius: 8px;
+  background: #e31f51;
+}
+.category5 {
+  border-radius: 8px;
+  background: #57cd9e;
+}
+.category p {
+  color: #fff;
+  font-family: Metropolis;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.title-new h1 {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 6%;
+  margin-top: 2%;
+}
+.title-new p {
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 6%;
+}
+.content {
+  width: 208px;
+  height: 278px;
+  flex-shrink: 0;
+}
+.title-popular h1 {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 6%;
+  margin-top: 7%;
+}
+.title-popular p {
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 6%;
+}
