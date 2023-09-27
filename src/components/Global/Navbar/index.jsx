@@ -111,10 +111,19 @@ const Navbar = () => {
 								padding: "5px 5px 5px",
 								backgroundColor: "rgba(210, 210, 210, 0.6)",
 								borderRadius: 6,
+								display: "flex",
+								flexDirection: "column",
+								gap: 4,
 							}}>
+							<Link
+								to="/profile"
+								className="btn btn-secondary py-1"
+								style={{ fontSize: 9 }}>
+								Profile
+							</Link>
 							<button
 								onClick={() => dispatch(logoutAction())}
-								className="btn btn-secondary py-1"
+								className="btn btn-danger py-1"
 								style={{ fontSize: 9 }}>
 								logout
 							</button>
