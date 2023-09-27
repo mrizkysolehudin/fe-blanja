@@ -1,0 +1,69 @@
+/* #page-search h1 {
+	font-size: 24px;
+} */
+#page-search #btn-sorting img {
+	width: 5vw;
+	height: 5vw;
+}
+
+#page-search #wrapper-img-popular-for-you,
+#page-search #wrapper-img-new-recipe {
+	width: 85%;
+}
+
+#page-search main p {
+	font-size: 3dvw;
+	margin-top: 3dvw;
+}
+
+#page-search main #popular-recipe p {
+	font-size: 4dvw;
+	font-weight: 500;
+	bottom: 0.3dvw;
+	left: 6dvw;
+	color: #3f3a3a;
+}
+#page-search main #popular-recipe img {
+	width: 100%;
+	/* width: 100%; */
+}
+
+@media only screen and (min-width: 425px) {
+}
+
+@media only screen and (min-width: 768px) {
+	#page-search #btn-sorting img {
+		width: 2vw;
+		height: 2vw;
+	}
+
+	#page-search #wrapper-img-popular-for-you,
+	#page-search #wrapper-img-new-recipe {
+		width: 50%;
+	}
+
+	#page-search main p {
+		font-size: 1.2dvw;
+		margin-top: 3dvw;
+	}
+
+	#page-search main #popular-recipe p {
+		font-size: 1.5dvw;
+		left: 4dvw;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+}
+@media only screen and (min-width: 1280px) {
+	#page-search main #popular-recipe p {
+		font-size: 1.6dvw;
+		left: 2.9dvw;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+}
+
+@media only screen and (min-width: 1720px) {
+}

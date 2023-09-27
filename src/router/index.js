@@ -7,6 +7,7 @@ import RegisterPage from "../pages/Register";
 import ProfilePage from "../pages/Profile";
 import NotFoundPage from "../pages/NotFound";
 import "../app.css";
+import SearchPage from "../pages/SearchPage";
 
 const Router = () => {
 	return (
@@ -18,6 +19,7 @@ const Router = () => {
 					<Route path="/login" element={<LoginPage />} />
 					<Route path="/register" element={<RegisterPage />} />
 					<Route path="/profile" element={<ProfilePage />} />
+					<Route path="/search-page" element={<SearchPage />} />
 
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>
