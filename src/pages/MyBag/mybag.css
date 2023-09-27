@@ -1,4 +1,4 @@
-.bag-title h1 {
+.text-start {
   color: var(--Black, #222);
   font-family: Metropolis;
   font-size: 34px;
@@ -6,4 +6,33 @@
   font-weight: 700;
   line-height: normal;
   margin-bottom: 5%;
+}
+.form-check-label {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.price {
+  color: #222;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.total {
+  color: #9b9b9b;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.btn {
+  width: 200px;
+  height: 36px;
+  flex-shrink: 0;
 }
