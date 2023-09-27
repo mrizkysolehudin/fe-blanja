@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./nav.css";
 import svgLogo from "../../../assets/profile/logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import svgDp from "../../../assets/profile/dp.svg";
 import { useDispatch } from "react-redux";
 import { logoutAction } from "../../../redux/reducers/authSlice";
 
 const Navbar = () => {
 	const dispatch = useDispatch();
+	const navigate = useNavigate();
 
 	const [isLogin, setIsLogin] = useState(false);
 	const [isToggleOpen, setIsToggleOpen] = useState(false);
+	const [searchTerm, setSearchTerm] = useState([]);
 
 	useEffect(() => {
 		const token = localStorage.getItem("token");
@@ -19,6 +21,20 @@ const Navbar = () => {
 			setIsLogin(true);
 		}
 	}, [isLogin]);
+
+	const handleSearch = (e) => {
+		e.preventDefault();
+
+		setTimeout(() => {
+			navigate(`/search-page?search=${searchTerm}`);
+		}, 1000);
+	};
+
+	const handleKeyDown = (e) => {
+		if (e.key === "Enter") {
+			handleSearch(e);
+		}
+	};
 
 	return (
 		<div
@@ -36,6 +52,9 @@ const Navbar = () => {
 					role="search"
 					style={{ marginLeft: "6%", width: "55%" }}>
 					<input
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
+						onKeyDown={handleKeyDown}
 						className="form-control me-2 py-2 ps-3 pe-5 border-gray"
 						type="search"
 						placeholder="Search"
@@ -43,8 +62,9 @@ const Navbar = () => {
 						style={{ borderRadius: "20px" }}
 					/>
 					<button
+						onClick={() => handleSearch()}
 						className="btn btn-search position-absolute"
-						type="submit"
+						type="button"
 						style={{ right: "18px", top: "2px" }}>
 						<i className="bi bi-search fs-6"></i>
 					</button>
@@ -91,10 +111,19 @@ const Navbar = () => {
 								padding: "5px 5px 5px",
 								backgroundColor: "rgba(210, 210, 210, 0.6)",
 								borderRadius: 6,
+								display: "flex",
+								flexDirection: "column",
+								gap: 4,
 							}}>
+							<Link
+								to="/profile"
+								className="btn btn-secondary py-1"
+								style={{ fontSize: 9 }}>
+								Profile
+							</Link>
 							<button
 								onClick={() => dispatch(logoutAction())}
-								className="btn btn-secondary py-1"
+								className="btn btn-danger py-1"
 								style={{ fontSize: 9 }}>
 								logout
 							</button>

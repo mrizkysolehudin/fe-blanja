@@ -1,7 +1,7 @@
 import React from "react";
 
 // Taruh filter modal di sebelum tutup body
-const Filter = () => {
+const FilterModal = () => {
 	return (
 		<div
 			className="modal fade"
@@ -41,4 +41,4 @@ const Filter = () => {
 	);
 };
 
-export default Filter;
+export default FilterModal;

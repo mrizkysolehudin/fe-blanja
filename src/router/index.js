@@ -8,8 +8,10 @@ import ProfilePage from "../pages/Profile";
 import NotFoundPage from "../pages/NotFound";
 import MyBagPage from "../pages/MyBag";
 import "../app.css";
+import SearchPage from "../pages/SearchPage";
 
 const Router = () => {
+
   return (
     <BrowserRouter>
       <Routes>
@@ -20,8 +22,10 @@ const Router = () => {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/mybag" element={<MyBagPage />} />
+          <Route path="/search-page" element={<SearchPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
+
 
         {/* private routes */}
         <Route element={<PrivateRoute />}>
