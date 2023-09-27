@@ -9,9 +9,9 @@ import NotFoundPage from "../pages/NotFound";
 import MyBagPage from "../pages/MyBag";
 import "../app.css";
 import SearchPage from "../pages/SearchPage";
+import Product from "../pages/Product";
 
 const Router = () => {
-
   return (
     <BrowserRouter>
       <Routes>
@@ -23,9 +23,9 @@ const Router = () => {
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/mybag" element={<MyBagPage />} />
           <Route path="/search-page" element={<SearchPage />} />
+          <Route path="/product" element={<Product />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
-
 
         {/* private routes */}
         <Route element={<PrivateRoute />}>
