@@ -153,48 +153,41 @@ const HomePage = () => {
           <p>What are you currently looking for</p>
         </div>
         <div className="category d-flex justify-content-center">
-          <button style={{ marginLeft: "6%" }}>
-            <div className="category1 d-flex rounded-3` ">
-              <img src={Image5} alt="T-shirt" />
-              <p>T-shirt</p>
-            </div>
-          </button>
-          <button>
-            <div
-              className="category2 d-flex rounded-3` "
-              style={{ marginLeft: "6%" }}
-            >
-              <img src={Image6} alt="Short" />
-              <p>Short</p>
-            </div>
-          </button>
-          <button>
-            <div
-              className="category3 d-flex rounded-3` "
-              style={{ marginLeft: "6%" }}
-            >
-              <img src={Image7} alt="Jacket" />
-              <p>Jacket</p>
-            </div>
-          </button>
-          <button>
-            <div
-              className="category4 d-flex rounded-3`"
-              style={{ marginLeft: "6%" }}
-            >
-              <img src={Image8} alt="Pants" />
-              <p>Pants</p>
-            </div>
-          </button>
-          <button>
-            <div
-              className="category5 d-flex rounded-3` "
-              style={{ marginLeft: "6%" }}
-            >
-              <img src={Image9} alt="Shoes" />
-              <p>Shoes</p>
-            </div>
-          </button>
+          <div
+            className="category1 d-flex rounded-3` "
+            style={{ marginLeft: "6%" }}
+          >
+            <img src={Image5} alt="T-shirt" />
+            <p>T-shirt</p>
+          </div>
+          <div
+            className="category2 d-flex rounded-3` "
+            style={{ marginLeft: "6%" }}
+          >
+            <img src={Image6} alt="Short" />
+            <p>Short</p>
+          </div>
+          <div
+            className="category3 d-flex rounded-3` "
+            style={{ marginLeft: "6%" }}
+          >
+            <img src={Image7} alt="Jacket" />
+            <p>Jacket</p>
+          </div>
+          <div
+            className="category4 d-flex rounded-3`"
+            style={{ marginLeft: "6%" }}
+          >
+            <img src={Image8} alt="Pants" />
+            <p>Pants</p>
+          </div>
+          <div
+            className="category5 d-flex rounded-3` "
+            style={{ marginLeft: "6%" }}
+          >
+            <img src={Image9} alt="Shoes" />
+            <p>Shoes</p>
+          </div>
         </div>
       </main>
       {/* end category */}
