@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Global/Navbar/index";
-import FilterModal from "../../components/Global/Navbar/filter_modal";
 import Sidebar from "../../components/Profile/Sidebar";
 import "./profile.css";
 import FormProfile from "../../components/Profile/FormProfile";
@@ -8,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getOneCustomerAction } from "../../redux/reducers/customer/getOneCustomerSlice";
 import { editCustomerAction } from "../../redux/reducers/customer/editCustomerSlice";
+import FilterModal from "../../components/Global/FilterModal";
 
 const ProfilePage = () => {
 	const navigate = useNavigate();

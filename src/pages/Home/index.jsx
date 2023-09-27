@@ -5,6 +5,7 @@ import CarouselSection from "../../components/Home/CarouselSection";
 import CategorySection from "../../components/Home/CategorySection";
 import NewSection from "../../components/Home/NewSection";
 import PopularSection from "../../components/Home/PopularSection";
+import FilterModal from "../../components/Global/FilterModal";
 
 const HomePage = () => {
 	return (
@@ -15,6 +16,8 @@ const HomePage = () => {
 			<CategorySection />
 			<NewSection />
 			<PopularSection />
+
+			<FilterModal />
 		</section>
 	);
 };
