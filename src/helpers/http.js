@@ -11,7 +11,7 @@ const httpJson = (token = null) => {
 
 	return axios.create({
 		headers,
-		withCredentials: true,
+		// withCredentials: true,
 	});
 };
 
@@ -26,7 +26,7 @@ export const httpFormData = (token = null) => {
 
 	return axios.create({
 		headers,
-		withCredentials: true,
+		// withCredentials: true,
 	});
 };
 

@@ -39,7 +39,7 @@ const MyProducts = () => {
 	return (
 		<div
 			id="page-myProducts"
-			style={{ backgroundColor: "#DB3022;", width: "100vw", minHeight: "100vh" }}
+			style={{ backgroundColor: "#f08080 ;", width: "100vw", minHeight: "100vh" }}
 			className="pt-5">
 			<div className="container py-5 ">
 				<h1 className="">My Products</h1>
