@@ -4,63 +4,37 @@ import "./myProductsPage.css";
 import axios from "axios";
 import { baseUrl } from "../../helpers/baseUrl";
 import NoResult from "../../components/NoResult";
+import { useDispatch } from "react-redux";
+import { deleteProductAction } from "../../redux/reducers/product/deleteProductSlice";
 
 const MyProducts = () => {
+	const dispatch = useDispatch();
+	const user_id = parseInt(localStorage.getItem("user_id"));
+
 	const [data, setData] = useState([]);
-	const [page, setPage] = useState(1);
-	const limit = 5;
-	const [pagination, setPagination] = useState([]);
 
 	useEffect(() => {
-		getData();
+		if (user_id) {
+			getData(user_id);
+		}
 		// eslint-disable-next-line
-	}, [page]);
+	}, [user_id]);
 
-	const getData = async () => {
+	const getData = async (user_id) => {
 		axios
-			.get(`${baseUrl}/product?page=${page}&limit=${limit}`)
+			.get(`${baseUrl}/product/seller-products/${user_id}`)
 			.then((response) => {
 				setData(response.data.data);
-				setPagination(response.data.pagination);
 			});
 	};
 
-	const previousPage = () => {
-		if (page > 1) {
-			setPage((prev) => prev - 1);
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		}
+	const handleDelete = async (id) => {
+		dispatch(deleteProductAction(id));
+
+		setTimeout(() => {
+			window.location.reload();
+		}, 1000);
 	};
-
-	const nextPage = () => {
-		if (pagination?.totalPage > page) {
-			setPage((prev) => prev + 1);
-			window.scrollTo({ top: 0, behavior: "smooth" });
-		}
-	};
-
-	const numberPageItems = [];
-	for (let i = 1; i <= pagination?.totalPage; i++) {
-		const isCurrentPage = i === pagination?.currentPage;
-
-		const pageItem = (
-			<li key={i} className={`page-item ${isCurrentPage ? "active" : ""}`}>
-				{isCurrentPage ? (
-					<span className="page-link" style={{ fontSize: 13 }}>
-						{i}
-					</span>
-				) : (
-					<button
-						className="page-link"
-						onClick={() => setPage(i)}
-						style={{ fontSize: 13 }}>
-						{i}
-					</button>
-				)}
-			</li>
-		);
-		numberPageItems.push(pageItem);
-	}
 
 	return (
 		<div
@@ -68,7 +42,7 @@ const MyProducts = () => {
 			style={{ backgroundColor: "#DB3022;", width: "100vw", minHeight: "100vh" }}
 			className="pt-5">
 			<div className="container py-5 ">
-				<h1 className="d-md-none ">My Products</h1>
+				<h1 className="">My Products</h1>
 
 				<main style={{ width: "90vw" }} className="py-5 my-5">
 					<section id="popular-recipe">
@@ -92,12 +66,17 @@ const MyProducts = () => {
 												}}
 											/>
 											<button
+												type="button"
+												onClick={(e) => {
+													e.preventDefault();
+													handleDelete(item?.id);
+												}}
 												className="position-absolute btn btn-danger py-0 px-1"
-												style={{ fontSize: 12, top: "2%", right: "2%" }}>
+												style={{ fontSize: 12, top: "2%", right: "2%", zIndex: 1 }}>
 												<i className="bi bi-trash text-white"></i>
 											</button>
 										</div>
-										<p>{item.name}</p>
+										<p>{item?.product_name}</p>
 									</Link>
 								))
 							) : (
@@ -106,32 +85,6 @@ const MyProducts = () => {
 						</div>
 					</section>
 				</main>
-
-				<section className="d-grid justify-content-center">
-					<nav aria-label="Page navigation example">
-						<ul className="pagination">
-							<li className="page-item">
-								<button
-									onClick={previousPage}
-									style={{ fontSize: 13 }}
-									className="page-link">
-									Prev
-								</button>
-							</li>
-
-							{numberPageItems}
-
-							<li className="page-item">
-								<button
-									onClick={nextPage}
-									style={{ fontSize: 13 }}
-									className="page-link">
-									Next
-								</button>
-							</li>
-						</ul>
-					</nav>
-				</section>
 			</div>
 		</div>
 	);
