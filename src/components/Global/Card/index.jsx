@@ -3,6 +3,7 @@ import iconStar from "../../../assets/icons/icon-star.svg";
 import { getFirstThreeWords } from "../../../utils/getThreeWords";
 import { Link } from "react-router-dom";
 
+
 const Card = ({ item = { image: "" } }) => {
 	return (
 		<div className="row g-4">

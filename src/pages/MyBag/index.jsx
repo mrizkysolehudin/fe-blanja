@@ -45,7 +45,11 @@ const myBag = () => {
 											<div className="">
 												<button
 													className="text-danger text-end btn btn-light"
-													style={{ textDecoration: "none", text: "end", width: "auto" }}>
+													style={{
+														textDecoration: "none",
+														text: "end",
+														width: "auto",
+													}}>
 													Delete
 												</button>
 											</div>
@@ -152,14 +156,12 @@ const myBag = () => {
 												<div className="d-flex flex-row justify-content-between align-items-center">
 													<img
 														src={Svgmin}
-														alt=""
 														className="text-muted me-3 iconNavbar"
 														style={{ cursor: "pointer" }}
 													/>
 													<label className="me-3"> 1 </label>
 													<img
 														src={Svgplus}
-														alt=""
 														className="text-muted iconNavbar"
 														style={{ cursor: "pointer" }}
 													/>
