@@ -16,36 +16,36 @@ import FilterModal from "../components/Global/FilterModal";
 import MyProducts from "../pages/MyProducts";
 
 const Router = () => {
-	return (
-		<BrowserRouter>
-			<div>
-				<Routes>
-					{/* public routes */}
-					<Route>
-						<Route path="/" element={<HomePage />} />
-						<Route path="/login" element={<LoginPage />} />
-						<Route path="/register" element={<RegisterPage />} />
-						<Route path="/search-page" element={<SearchPage />} />
-						<Route path="/product/:id" element={<Product />} />
-						<Route path="/category/:id" element={<CategoryPage />} />
+  return (
+    <BrowserRouter>
+      <div>
+        <Routes>
+          {/* public routes */}
+          <Route>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/search-page" element={<SearchPage />} />
+            <Route path="/product/:id" element={<Product />} />
+            <Route path="/category/:id" element={<CategoryPage />} />
 
-						<Route path="*" element={<NotFoundPage />} />
-					</Route>
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
 
-					{/* private routes */}
-					<Route element={<PrivateRoute />}>
-						<Route path="/mybag" element={<MyBagPage />} />
-						<Route path="/checkout" element={<Checkout />} />
-						<Route path="/profile" element={<ProfilePage />} />
-						<Route path="/my-products" element={<MyProducts />} />
-						{/*  */}
-						{/*  */}
-					</Route>
-				</Routes>
-				<FilterModal />
-			</div>
-		</BrowserRouter>
-	);
+          {/* private routes */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/mybag" element={<MyBagPage />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/my-products" element={<MyProducts />} />
+            {/*  */}
+            {/*  */}
+          </Route>
+        </Routes>
+        <FilterModal />
+      </div>
+    </BrowserRouter>
+  );
 };
 
 export default Router;
