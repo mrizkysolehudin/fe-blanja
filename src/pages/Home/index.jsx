@@ -215,7 +215,7 @@
 
 // export default HomePage;
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Global/Navbar";
 import "./home.css";
 import CarouselSection from "../../components/Home/CarouselSection";
@@ -233,10 +233,6 @@ const HomePage = () => {
 	useEffect(() => {
 		dispatch(getAllProductsAction(""));
 	}, [dispatch]);
-
-	useEffect(() => {
-		//
-	}, [isLoading, isError]);
 
 	return (
 		<section>
