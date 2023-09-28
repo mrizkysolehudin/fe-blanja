@@ -1,0 +1,79 @@
+#address-modal .btn-add-address {
+  width: 100%;
+  height:80px;
+  background-color: white;
+  color:#9B9B9B;
+  border: 2px dashed #9B9B9B;
+}
+
+#address-modal .btn-add-address:hover {
+  background-color: #eeeded ;
+}
+
+#address-modal .btn-add-address:active {
+  background-color: white;
+}
+
+#address-modal .card-in-modal {
+  border-radius: 5px; 
+  border: 1px solid #9B9B9B;
+  width:100%; 
+  padding: 30px;
+}
+
+#address-modal .card-selected {
+  border: 1px solid #DB3022;
+}
+
+#address-modal .fs-input {
+  font-size: 14px;
+  color: #9B9B9B
+}
+
+#address-modal .p-input {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #9B9B9B;
+  border-radius: 4px;
+}
+
+#address-modal .btn-save {
+  width:160px;
+  height:36px;
+  background-color: #DB3022;
+  color:white;
+  border:none;
+  font-size: 0.9rem;
+  border-radius:24px;
+  padding-top: 2px
+}
+
+#address-modal .btn-save:hover {
+  background-color: #f74141 ;
+}
+
+#address-modal .btn-save:active {
+  background-color: #DB3022 ;
+}
+
+#address-modal .btn-cancel {
+  width:160px;
+  height:36px;
+  background-color: white;
+  color:#9B9B9B;
+  border: 1px solid #9B9B9B;
+  font-size: 0.9rem;
+  border-radius:24px;
+  padding-top: 2px
+}
+
+#address-modal .btn-cancel:hover {
+  background-color: #eeeded ;
+}
+
+#address-modal .btn-cancel:active {
+  background-color: white;
+}
+
+#address-modal .text-red {
+  color: #DB3022
+}
