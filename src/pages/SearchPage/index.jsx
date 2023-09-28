@@ -29,6 +29,7 @@ const SearchPage = () => {
 			)
 			.then((response) => {
 				setSearchData(response.data.data);
+				console.log(response.data);
 				setPagination(response.data.pagination);
 			});
 	};
@@ -111,7 +112,7 @@ const SearchPage = () => {
 						<input
 							type="text"
 							className="form-control"
-							placeholder="search recipe"
+							placeholder="search..."
 							onChange={(e) => setSearchTerm(e.target.value)}
 							value={searchTerm}
 						/>
@@ -121,30 +122,28 @@ const SearchPage = () => {
 				<main style={{ width: "90vw" }} className="py-5 my-5">
 					<section id="popular-recipe">
 						<div className="d-flex flex-wrap row-gap-4 gap-4 justify-content-center">
-							{!!searchData?.length ? (
+							{!!dataFilter?.length ? (
 								dataFilter?.map((item, index) => (
 									<Link
 										key={index}
-										to={`/recipe/${item?.recipe_id}`}
+										to={`/product/${item?.id}`}
 										className="col-xl-2 col-md-2 col-12"
 										style={{ position: "relative" }}>
-										<img
-											src={item?.image}
-											alt={item?.title}
-											style={{
-												objectFit: "contain",
-												height: "100%",
-											}}
-										/>
-										{console.log(item)}
+										<div className="" style={{ height: "65%" }}>
+											<img
+												src={item?.image}
+												alt={item?.name}
+												style={{
+													objectFit: "contain",
+													height: "100%",
+												}}
+											/>
+										</div>
 										<p>{item.name}</p>
-										{/* <div style={{ marginTop: -50 }}>
-											<p className="fs-6 text-center">{getFirstThreeWords(item?.title)}</p>
-										</div> */}
 									</Link>
 								))
 							) : (
-								<NoResult text="No Result" />
+								<NoResult text="No Item" />
 							)}
 						</div>
 					</section>
