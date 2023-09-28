@@ -26,6 +26,7 @@ export const loginCustomerAction = createAsyncThunk(
 
 			const response = await httpJson().post(`${baseUrl}/customer/login`, data);
 			localStorage.setItem("token", response.data.data.token);
+			localStorage.setItem("role", response.data.data.role);
 			localStorage.setItem("user_id", response.data.data.id);
 
 			const cookies = document.cookie;
@@ -67,7 +68,8 @@ export const loginSellerAction = createAsyncThunk(
 
 			const response = await httpJson().post(`${baseUrl}/seller/login`, data);
 			localStorage.setItem("token", response.data.data.token);
-			localStorage.setItem("user_id", response.data.data.user_id);
+			localStorage.setItem("role", response.data.data.role);
+			localStorage.setItem("user_id", response.data.data.id);
 
 			Swal.fire({
 				title: "Login success",
