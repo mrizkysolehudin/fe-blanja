@@ -5,8 +5,16 @@ import Image2 from "../../assets/img/jasnew.png";
 import Svgplus from "../../assets/icons/icon-plus.svg";
 import Svgmin from "../../assets/icons/icon-minus.svg";
 import "./mybag.css";
+import { useNavigate } from "react-router-dom";
 
-const myBag = () => {
+const MyBagPage = () => {
+	const navigate = useNavigate();
+
+	const handleCheckout = (e) => {
+		e.preventDefault();
+		navigate("/checkout");
+	};
+
 	return (
 		<div>
 			{/* Start Navbar */}
@@ -187,7 +195,10 @@ const myBag = () => {
 										<p className="total">Total price</p>
 										<p className="text-danger">$ 40.0</p>
 									</div>
-									<button type="button" class="btn btn-danger BtnCheckOut">
+									<button
+										onClick={(e) => handleCheckout(e)}
+										type="button"
+										class="btn btn-danger BtnCheckOut">
 										Buy
 									</button>
 								</div>
@@ -200,4 +211,4 @@ const myBag = () => {
 	);
 };
 
-export default myBag;
+export default MyBagPage;
