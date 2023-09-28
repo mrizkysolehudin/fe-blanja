@@ -9,6 +9,7 @@ import { logoutAction } from "../../../redux/reducers/authSlice";
 const Navbar = () => {
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+	const role = parseInt(localStorage.getItem("role"));
 
 	const [isLogin, setIsLogin] = useState(false);
 	const [isToggleOpen, setIsToggleOpen] = useState(false);
@@ -121,6 +122,15 @@ const Navbar = () => {
 								style={{ fontSize: 9 }}>
 								Profile
 							</Link>
+							{console.log(role)}
+							{role === 0 && (
+								<Link
+									to="/my-products"
+									className="btn btn-secondary py-1"
+									style={{ fontSize: 9 }}>
+									My Products
+								</Link>
+							)}
 							<button
 								onClick={() => dispatch(logoutAction())}
 								className="btn btn-danger py-1"

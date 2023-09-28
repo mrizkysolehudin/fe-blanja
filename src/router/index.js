@@ -13,6 +13,7 @@ import SearchPage from "../pages/SearchPage";
 import Product from "../pages/Product";
 import CategoryPage from "../pages/Category";
 import FilterModal from "../components/Global/FilterModal";
+import MyProducts from "../pages/MyProducts";
 
 const Router = () => {
 	return (
@@ -36,6 +37,7 @@ const Router = () => {
 						<Route path="/mybag" element={<MyBagPage />} />
 						<Route path="/checkout" element={<Checkout />} />
 						<Route path="/profile" element={<ProfilePage />} />
+						<Route path="/my-products" element={<MyProducts />} />
 						{/*  */}
 						{/*  */}
 					</Route>
