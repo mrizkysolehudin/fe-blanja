@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'Metropolis';
+  src: url('../../assets/font/Metropolis-Regular.otf');
+}
+
+#page-checkout {
+  font-family: 'Metropolis' !important;
+}
+
+#page-checkout .mycard {
+  border-radius: 5px; 
+  box-shadow: 0 0px 5px 0 rgba(115, 155, 155, 0.4);
+  margin-bottom: 1rem;
+}
+
+#page-checkout .card-address {
+  width:98%; 
+  padding: 30px;
+}
+
+#page-checkout .card-product {
+  width:98%; 
+  height:130px; 
+  padding: 30px;
+}
+
+#page-checkout .text-lightGray {
+  color: #9B9B9B;
+}
+
+#page-checkout .text-red {
+  color: #DB3022;
+}
+
+#page-checkout .btn-address {
+  width:195px;
+  height:36px;
+  background-color: white;
+  color:#9B9B9B;
+  border: 1px solid #9B9B9B;
+  font-size: 0.9rem;
+  border-radius:24px;
+  padding-top: 2px
+}
+
+#page-checkout .btn-address:hover {
+  background-color: #eeeded ;
+}
+
+#page-checkout .btn-address:active {
+  background-color: white;
+}
+
+#page-checkout .btn-payment {
+  width:100%;
+  height:36px;
+  background-color: #DB3022;
+  color:white;
+  border:none;
+  font-size: 0.9rem;
+  border-radius:24px;
+  padding-top: 2px
+}
+
+#page-checkout .btn-payment:hover {
+  background-color: #f74141 ;
+}
+
+#page-checkout .btn-payment:active {
+  background-color: #DB3022 ;
+}
+
+#page-checkout .img-product {
+  width:70px; 
+  height:70px;
+  border-radius: 5px; 
+  float: left;
+  margin-right: 1rem;  
+}
+
+#page-checkout .store-name {
+  margin-top: -15px; 
+  color:#9B9B9B; 
+  font-size:12px;
+}
+
+#page-checkout .grid-end-center {
+  display: grid;
+  justify-content: end;
+  align-items: center; 
+}
+
+
+/* Responsive */
+#page-checkout .content-checkout {
+  /* width:100%; */
+  margin: 0 120px;
+  height:800px;
+}
+
+#page-checkout .payment-inBelow {
+  display: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  /* Laptop */
+  /* body {
+    background-color: lightgreen;
+  } */
+  #page-checkout .content-checkout {
+    margin: 0 3rem;
+    height:800px;
+  }
+
+  #page-checkout .payment-inBelow {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  /* Tablet */
+  /* body {
+    background-color: pink;
+  } */
+  #page-checkout .card-address {
+    width:98%;
+    padding: 30px;
+  }
+
+  #page-checkout .content-checkout {
+    margin: 0 1.5rem;
+    height:1100px;
+  }
+ 
+  #page-checkout .payment-inBelow {
+    display: block;
+  }
+
+  #page-checkout .payment-inRight {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  /* Mobile L */
+  /* body {
+    background-color: orange;
+  } */
+}
