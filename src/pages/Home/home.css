@@ -111,3 +111,7 @@
 	line-height: normal;
 	margin-left: 6%;
 }
+
+#page-home a {
+	text-decoration: none;
+}

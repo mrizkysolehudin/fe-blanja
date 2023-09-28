@@ -21,19 +21,19 @@ const CategorySection = ({
 					<Alert type="error" />
 				) : dataCategories?.length > 0 ? (
 					dataCategories?.slice(0, 5)?.map((item, index) => (
-						<div
-							key={index}
-							className=" d-flex rounded-3` "
-							style={{
-								marginLeft: "6%",
-								borderRadius: "8px",
-								backgroundColor: item?.color,
-							}}>
-							{console.log(item.id)}
-							<Link to={`/category/${item?.id}`} className="stretched-link"></Link>
-							<img src={item?.image} alt={item?.name} />
-							<p className="title-name">{item?.name}</p>
-						</div>
+						<Link to={`/category/${item?.id}`}>
+							<div
+								key={index}
+								className=" d-flex rounded-3` "
+								style={{
+									marginLeft: "6%",
+									borderRadius: "8px",
+									backgroundColor: item?.color,
+								}}>
+								<img src={item?.image} alt={item?.name} />
+								<p className="title-name">{item?.name}</p>
+							</div>
+						</Link>
 					))
 				) : (
 					<NoResult />
