@@ -1,5 +1,6 @@
 import React from "react";
 import iconStar from "../../../assets/icons/icon-star.svg";
+import { getFirstThreeWords } from "../../../utils/getThreeWords";
 
 const Card = ({ item = { image: "" } }) => {
 	return (
@@ -11,13 +12,13 @@ const Card = ({ item = { image: "" } }) => {
 					<div className="card h-100">
 						<img
 							crossOrigin="anonymous"
-							src={item.image}
+							src={item?.image}
 							className="card-img-top"
 							alt="cardImage"
 						/>
 						<div className="card-body d-flex flex-column justify-content-between">
 							<h4 className="card-title text-dark">
-								Men's formal suit - Black & White
+								{getFirstThreeWords(item?.name)}
 							</h4>
 							<div>
 								<h5 className="text-danger metropolis-b">$ 40.0</h5>
