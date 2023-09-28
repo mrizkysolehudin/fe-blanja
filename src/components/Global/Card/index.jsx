@@ -18,7 +18,7 @@ const Card = () => {
               alt="cardImage"
             />
             <div className="card-body d-flex flex-column justify-content-between">
-              <h4 className="card-title text-dark">
+              <h4 className="card-title text-dark" style={{ fontSize: "16px" }}>
                 Men's formal suit - Black & White
               </h4>
               <div>

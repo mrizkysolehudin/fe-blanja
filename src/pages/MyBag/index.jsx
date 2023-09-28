@@ -14,10 +14,7 @@ const myBag = () => {
       {/* End Navbar */}
 
       {/* Content */}
-      <div
-        className="container d-flex flex-row justify-content-between"
-        //   style={{ marginTop: "5rem" }}
-      >
+      <div className="container d-flex flex-row justify-content-between">
         <div className=" container" style={{ marginTop: "7%" }}>
           <h1 className="text-start mt-5">My bag</h1>
 
