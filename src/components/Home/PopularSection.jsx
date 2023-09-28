@@ -1,24 +1,26 @@
 import React from "react";
 import Card from "../Global/Card";
+import NoResult from "../NoResult";
+import Alert from "../Global/Alert";
 
-const PopularSection = () => {
+const PopularSection = ({ data, isLoading, isError }) => {
 	return (
 		<section id="page-home">
 			<div className="title-popular">
 				<h1>Popular</h1>
 				<p>Find clothes that are trending recently</p>
 			</div>
+
 			<div className="d-flex flex-wrap row-gap-4 gap-3">
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				{isLoading ? (
+					<Alert type="loading" />
+				) : isError ? (
+					<Alert type="error" />
+				) : data?.length > 0 ? (
+					data?.map((item, index) => <Card key={index} item={item} />)
+				) : (
+					<NoResult />
+				)}
 			</div>
 		</section>
 	);
