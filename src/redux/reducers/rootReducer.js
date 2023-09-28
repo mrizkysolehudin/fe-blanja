@@ -4,6 +4,7 @@ import editCustomerReducer from "./customer/editCustomerSlice";
 import getOneCustomerReducer from "./customer/getOneCustomerSlice";
 import registerSellerReducer from "./seller/registerSellerSlice";
 import allProductsReducer from "./product/getAllProductsSlice";
+import allCategoriesReducer from "./category/getAllCategoriesSlice";
 import { combineReducers } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
 	editCustomer: editCustomerReducer,
 	registerSeller: registerSellerReducer,
 	allProducts: allProductsReducer,
+	allCategories: allCategoriesReducer,
 });
 
 export default rootReducer;

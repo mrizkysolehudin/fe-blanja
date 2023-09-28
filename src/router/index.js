@@ -11,6 +11,7 @@ import Checkout from "../pages/Checkout";
 import "../app.css";
 import SearchPage from "../pages/SearchPage";
 import Product from "../pages/Product";
+import CategoryPage from "../pages/Category";
 
 const Router = () => {
 	return (
@@ -26,6 +27,7 @@ const Router = () => {
 					<Route path="/search-page" element={<SearchPage />} />
 					<Route path="/product" element={<Product />} />
 					<Route path="/checkout" element={<Checkout />} />
+					<Route path="/category/:id" element={<CategoryPage />} />
 
 					<Route path="*" element={<NotFoundPage />} />
 				</Route>

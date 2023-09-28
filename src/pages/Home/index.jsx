@@ -225,13 +225,20 @@ import PopularSection from "../../components/Home/PopularSection";
 import FilterModal from "../../components/Global/FilterModal";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProductsAction } from "../../redux/reducers/product/getAllProductsSlice";
+import { getAllCategoriesAction } from "../../redux/reducers/category/getAllCategoriesSlice";
 
 const HomePage = () => {
 	const dispatch = useDispatch();
 	const { data, isLoading, isError } = useSelector((state) => state.allProducts);
+	const {
+		data: dataCategories,
+		isLoadingCategory,
+		isErrorCategory,
+	} = useSelector((state) => state.allCategories);
 
 	useEffect(() => {
 		dispatch(getAllProductsAction(""));
+		dispatch(getAllCategoriesAction());
 	}, [dispatch]);
 
 	return (
@@ -239,7 +246,11 @@ const HomePage = () => {
 			<Navbar />
 
 			<CarouselSection />
-			<CategorySection />
+			<CategorySection
+				dataCategories={dataCategories}
+				isLoadingCategory={isLoadingCategory}
+				isErrorCategory={isErrorCategory}
+			/>
 			<NewSection data={data} isLoading={isLoading} isError={isError} />
 			<PopularSection data={data} isLoading={isLoading} isError={isError} />
 
