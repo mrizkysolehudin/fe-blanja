@@ -21,6 +21,7 @@ const myBag = () => {
         <div className=" container" style={{ marginTop: "7%" }}>
           <h1 className="text-start mt-5">My bag</h1>
 
+
           <div className="d-flex flex-row justify-content-between MyOrderHP">
             <div className="ContentMyOrderHP" style={{ width: "65%" }}>
               <div className="card mb-3 me-4" style={{ width: "100%" }}>
@@ -81,35 +82,35 @@ const myBag = () => {
                         />
                       </div>
 
-                      <div className="me-5">
-                        <h4
-                          className="navbar-brand ms-2  text-start text-wrap "
-                          style={{ marginBottom: "2px", width: "100%" }}
-                        >
-                          Men's Jacket jeans
-                        </h4>
-                        <p
-                          className="text-muted text-start ms-2 text-wrap "
-                          style={{ fontSize: "13px" }}
-                        >
-                          Zalora Cloth
-                        </p>
-                      </div>
-                      <div className="d-flex flex-row justify-content-between align-items-center">
-                        <img
-                          src={Svgmin}
-                          className="text-muted me-3 iconNavbar"
-                          style={{ cursor: "pointer" }}
-                        />
-                        <label className="me-3"> 1 </label>
-                        <img
-                          src={Svgplus}
-                          className="text-muted iconNavbar"
-                          style={{ cursor: "pointer" }}
-                        />
-                      </div>
-                    </div>
-                  </div>
+											<div className="me-5">
+												<h4
+													className="navbar-brand ms-2  text-start text-wrap "
+													style={{ marginBottom: "2px", width: "100%" }}>
+													Men's Jacket jeans
+												</h4>
+												<p
+													className="text-muted text-start ms-2 text-wrap "
+													style={{ fontSize: "13px" }}>
+													Zalora Cloth
+												</p>
+											</div>
+											<div className="d-flex flex-row justify-content-between align-items-center">
+												<img
+													src={Svgmin}
+													alt=""
+													className="text-muted me-3 iconNavbar"
+													style={{ cursor: "pointer" }}
+												/>
+												<label className="me-3"> 1 </label>
+												<img
+													src={Svgplus}
+													alt=""
+													className="text-muted iconNavbar"
+													style={{ cursor: "pointer" }}
+												/>
+											</div>
+										</div>
+									</div>
 
                   <div>
                     <div className="price ms-4 end-2">$ 20.0</div>
@@ -178,6 +179,7 @@ const myBag = () => {
                 </div>
               </div>
             </div>
+
 
             <div className="card cardCost" style={{ width: "30%" }}>
               <div className="card-body">

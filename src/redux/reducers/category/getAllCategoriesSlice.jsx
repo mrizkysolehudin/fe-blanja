@@ -2,11 +2,11 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import httpJson from "../../../helpers/http";
 import { baseUrl } from "../../../helpers/baseUrl";
 
-export const getAllProductsAction = createAsyncThunk(
-	"product/getAllProducts",
+export const getAllCategoriesAction = createAsyncThunk(
+	"category/getAllCategories",
 	async (search, { rejectWithValue }) => {
 		try {
-			const response = await httpJson().get(`${baseUrl}/product?search=${search}`);
+			const response = await httpJson().get(`${baseUrl}/category`);
 
 			return response.data.data;
 		} catch (error) {
@@ -15,30 +15,30 @@ export const getAllProductsAction = createAsyncThunk(
 	},
 );
 
-const getAllProductsSlice = createSlice({
-	name: "allProducts",
+const getAllCategorieSlice = createSlice({
+	name: "allCategories",
 	initialState: {
 		isLoading: false,
 		isError: false,
 		data: [],
 	},
 	extraReducers: (builder) => {
-		builder.addCase(getAllProductsAction.pending, (state, action) => {
+		builder.addCase(getAllCategoriesAction.pending, (state, action) => {
 			state.isLoading = true;
 			state.isError = false;
 		});
 
-		builder.addCase(getAllProductsAction.fulfilled, (state, action) => {
+		builder.addCase(getAllCategoriesAction.fulfilled, (state, action) => {
 			state.isLoading = false;
 			state.isError = false;
 			state.data = action?.payload;
 		});
 
-		builder.addCase(getAllProductsAction.rejected, (state, action) => {
+		builder.addCase(getAllCategoriesAction.rejected, (state, action) => {
 			state.isLoading = false;
 			state.isError = true;
 		});
 	},
 });
 
-export default getAllProductsSlice.reducer;
+export default getAllCategorieSlice.reducer;

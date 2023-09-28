@@ -62,7 +62,7 @@ const Navbar = () => {
 						style={{ borderRadius: "20px" }}
 					/>
 					<button
-						onClick={() => handleSearch()}
+						onClick={handleSearch}
 						className="btn btn-search position-absolute"
 						type="button"
 						style={{ right: "18px", top: "2px" }}>
@@ -134,7 +134,7 @@ const Navbar = () => {
 				<div
 					className="d-flex flex-row justify-content-end gap-3 me-nav"
 					style={{ width: "30%" }}>
-					<Link to="/cart" className="me-4 hidden">
+					<Link to="/mybag" className="me-4 hidden">
 						<i className="bi bi-cart2 fs-4 text-gray"></i>
 					</Link>
 					<div>
