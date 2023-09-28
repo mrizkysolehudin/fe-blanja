@@ -3,6 +3,7 @@ import registerCustomerReducer from "./customer/registerCustomerSlice";
 import editCustomerReducer from "./customer/editCustomerSlice";
 import getOneCustomerReducer from "./customer/getOneCustomerSlice";
 import registerSellerReducer from "./seller/registerSellerSlice";
+import allProductsReducer from "./product/getAllProductsSlice";
 import { combineReducers } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
 	getOneCustomer: getOneCustomerReducer,
 	editCustomer: editCustomerReducer,
 	registerSeller: registerSellerReducer,
+	allProducts: allProductsReducer,
 });
 
 export default rootReducer;

@@ -1,10 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import Swal from "sweetalert2";
-import { baseUrl } from "../../../helpers/baseUrl";
 import httpJson from "../../../helpers/http";
+import { baseUrl } from "../../../helpers/baseUrl";
 
 export const ggetAllProductsAction = createAsyncThunk(
-	"product/getAllRecipes",
+	"product/getAllProducts",
 	async (search, { rejectWithValue }) => {
 		try {
 			const response = await httpJson().get(`${baseUrl}/product?search=${search}`);
@@ -17,37 +16,23 @@ export const ggetAllProductsAction = createAsyncThunk(
 );
 
 const getAllProductsSlice = createSlice({
-	name: "product",
+	name: "allProducts",
 	initialState: {
 		isLoading: false,
 		isError: false,
+		data: [],
 	},
 	extraReducers: (builder) => {
-		builder.addCase(getAllRecipesAction.pending, (state, action) => {
+		builder.addCase(ggetAllProductsAction.pending, (state, action) => {
 			state.isLoading = true;
 		});
 
-		builder.addCase(getAllRecipesAction.fulfilled, (state, action) => {
+		builder.addCase(ggetAllProductsAction.fulfilled, (state, action) => {
 			state.isLoading = false;
 			state.data = action?.payload;
 		});
 
-		builder.addCase(getAllRecipesAction.rejected, (state, action) => {
-			state.isLoading = false;
-			state.isError = action?.payload;
-		});
-
-		// delete
-		builder.addCase(deleteRecipeAction.pending, (state, action) => {
-			state.isLoading = true;
-		});
-
-		builder.addCase(deleteRecipeAction.fulfilled, (state, action) => {
-			state.isLoading = false;
-			state.isDelete = true;
-		});
-
-		builder.addCase(deleteRecipeAction.rejected, (state, action) => {
+		builder.addCase(ggetAllProductsAction.rejected, (state, action) => {
 			state.isLoading = false;
 			state.isError = action?.payload;
 		});
