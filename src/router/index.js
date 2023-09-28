@@ -24,10 +24,8 @@ const Router = () => {
 						<Route path="/" element={<HomePage />} />
 						<Route path="/login" element={<LoginPage />} />
 						<Route path="/register" element={<RegisterPage />} />
-						<Route path="/mybag" element={<MyBagPage />} />
 						<Route path="/search-page" element={<SearchPage />} />
 						<Route path="/product/:id" element={<Product />} />
-						<Route path="/checkout" element={<Checkout />} />
 						<Route path="/category/:id" element={<CategoryPage />} />
 
 						<Route path="*" element={<NotFoundPage />} />
@@ -35,6 +33,8 @@ const Router = () => {
 
 					{/* private routes */}
 					<Route element={<PrivateRoute />}>
+						<Route path="/mybag" element={<MyBagPage />} />
+						<Route path="/checkout" element={<Checkout />} />
 						<Route path="/profile" element={<ProfilePage />} />
 						{/*  */}
 						{/*  */}
