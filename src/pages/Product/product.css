@@ -1,0 +1,92 @@
+#product-page .title p {
+  color: #9b9b9b;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#product-page .price {
+  color: #9b9b9b;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#product-page .mt-4 {
+  color: #222;
+  font-family: Metropolis;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+#product-page .my-0 {
+  color: var(--Black, #222);
+
+  /* 16px */
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#product-page .size {
+  color: var(--Black, #222);
+
+  /* 16px */
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#product-page .product h1 {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#product-page .product h2 {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+#product-page .product .condition h1 {
+  color: #db3022;
+  font-family: Metropolis;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+#product-page .description p {
+  color: #9b9b9b;
+  font-family: Metropolis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 171.429% */
+}
+#product-page .title-card h1 {
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 64.706% */
+}
+#product-page .title-card p {
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
