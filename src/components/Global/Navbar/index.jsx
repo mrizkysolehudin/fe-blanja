@@ -62,7 +62,7 @@ const Navbar = () => {
 						style={{ borderRadius: "20px" }}
 					/>
 					<button
-						onClick={() => handleSearch()}
+						onClick={handleSearch}
 						className="btn btn-search position-absolute"
 						type="button"
 						style={{ right: "18px", top: "2px" }}>

@@ -29,7 +29,6 @@ const SearchPage = () => {
 			)
 			.then((response) => {
 				setSearchData(response.data.data);
-				console.log(response.data);
 				setPagination(response.data.pagination);
 			});
 	};
