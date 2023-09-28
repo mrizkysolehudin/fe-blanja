@@ -1,4 +1,4 @@
-.text-start {
+#bag-page .text-start {
   color: var(--Black, #222);
   font-family: Metropolis;
   font-size: 34px;
@@ -7,15 +7,23 @@
   line-height: normal;
   margin-bottom: 5%;
 }
-.form-check-label {
-  color: var(--Black, #222);
+#bag-page .form-check-label {
+  color: #000;
   font-family: Metropolis;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  line-height: 24px; /* 150% */
 }
-.price {
+#bag-page .me-5 h4 {
+  color: #000;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+}
+#bag-page .price {
   color: #222;
   font-family: Metropolis;
   font-size: 16px;
@@ -23,7 +31,7 @@
   font-weight: 600;
   line-height: normal;
 }
-.total {
+#bag-page .total {
   color: #9b9b9b;
   font-family: Metropolis;
   font-size: 16px;
@@ -31,7 +39,7 @@
   font-weight: 500;
   line-height: normal;
 }
-.btn {
+#bag-page .btn {
   width: 200px;
   height: 36px;
   flex-shrink: 0;

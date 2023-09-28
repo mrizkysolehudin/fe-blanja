@@ -8,7 +8,7 @@ import "./mybag.css";
 
 const myBag = () => {
   return (
-    <div className="">
+    <div id="bag-page">
       {/* Start Navbar */}
       <Navbar />
       {/* End Navbar */}
@@ -78,12 +78,12 @@ const myBag = () => {
                       </div>
 
                       <div className="me-5">
-                        <p
+                        <h4
                           className="navbar-brand ms-2  text-start text-wrap "
                           style={{ marginBottom: "2px", width: "100%" }}
                         >
-                          Men's formal suit - Black
-                        </p>
+                          Men's Jacket jeans
+                        </h4>
                         <p
                           className="text-muted text-start ms-2 text-wrap "
                           style={{ fontSize: "13px" }}
@@ -138,12 +138,12 @@ const myBag = () => {
                       </div>
 
                       <div className="me-5">
-                        <p
+                        <h4
                           className="navbar-brand ms-2  text-start text-wrap "
                           style={{ marginBottom: "2px", width: "100%" }}
                         >
                           Men's formal suit - Black
-                        </p>
+                        </h4>
                         <p
                           className="text-muted text-start ms-2 text-wrap "
                           style={{ fontSize: "13px" }}
