@@ -240,7 +240,7 @@ const HomePage = () => {
 
 			<CarouselSection />
 			<CategorySection />
-			<NewSection />
+			<NewSection data={data} isLoading={isLoading} isError={isError} />
 			<PopularSection data={data} isLoading={isLoading} isError={isError} />
 
 			<FilterModal />

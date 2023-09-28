@@ -1,7 +1,12 @@
 import React from "react";
 import Card from "../Global/Card";
+import Alert from "../Global/Alert";
+import NoResult from "../NoResult";
 
-const NewSection = () => {
+const NewSection = ({ data, isLoading, isError }) => {
+	const dataLength = data?.length;
+	const lastItem = dataLength > 6 ? dataLength - 6 : 0;
+
 	return (
 		<section id="page-home">
 			<div className="title-new">
@@ -9,16 +14,17 @@ const NewSection = () => {
 				<p>You’ve never seen it before!</p>
 			</div>
 			<div className="d-flex flex-wrap row-gap-4 gap-3">
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				{isLoading ? (
+					<Alert type="loading" />
+				) : isError ? (
+					<Alert type="error" />
+				) : data?.length > 0 ? (
+					data
+						?.slice(lastItem, dataLength)
+						?.map((item, index) => <Card key={index} item={item} />)
+				) : (
+					<NoResult />
+				)}
 			</div>
 		</section>
 	);
