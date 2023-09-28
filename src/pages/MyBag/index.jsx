@@ -14,7 +14,10 @@ const myBag = () => {
       {/* End Navbar */}
 
       {/* Content */}
-      <div className="container d-flex flex-row justify-content-between">
+      <div
+        className="container d-flex flex-row justify-content-between"
+        //   style={{ marginTop: "5rem" }}
+      >
         <div className=" container" style={{ marginTop: "7%" }}>
           <h1 className="text-start mt-5">My bag</h1>
 
@@ -40,13 +43,16 @@ const myBag = () => {
                     </div>
 
                     <div className="">
-                      <a
-                        href="#"
-                        className="text-danger text-end"
-                        style={{ textDecoration: "none", text: "end" }}
+                      <button
+                        className="text-danger text-end btn btn-light"
+                        style={{
+                          textDecoration: "none",
+                          text: "end",
+                          width: "auto",
+                        }}
                       >
                         Delete
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -69,6 +75,7 @@ const myBag = () => {
                       <div>
                         <img
                           src={Image}
+                          alt=""
                           className="contentCheckOut me-2 img-fluid"
                           style={{ cursor: "pointer" }}
                         />
@@ -125,6 +132,7 @@ const myBag = () => {
                       <div>
                         <img
                           src={Image2}
+                          alt=""
                           className="contentCheckOut me-2 img-fluid"
                           style={{
                             cursor: "pointer",
