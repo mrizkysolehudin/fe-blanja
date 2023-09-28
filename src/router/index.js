@@ -13,31 +13,31 @@ import SearchPage from "../pages/SearchPage";
 import Product from "../pages/Product";
 
 const Router = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        {/* public routes */}
-        <Route>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/mybag" element={<MyBagPage />} />
-          <Route path="/search-page" element={<SearchPage />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/checkout" element={<Checkout />} />
+	return (
+		<BrowserRouter>
+			<Routes>
+				{/* public routes */}
+				<Route>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/login" element={<LoginPage />} />
+					<Route path="/register" element={<RegisterPage />} />
+					<Route path="/profile" element={<ProfilePage />} />
+					<Route path="/mybag" element={<MyBagPage />} />
+					<Route path="/search-page" element={<SearchPage />} />
+					<Route path="/product" element={<Product />} />
+					<Route path="/checkout" element={<Checkout />} />
 
-          <Route path="*" element={<NotFoundPage />} />
-        </Route>
+					<Route path="*" element={<NotFoundPage />} />
+				</Route>
 
-        {/* private routes */}
-        <Route element={<PrivateRoute />}>
-          {/*  */}
-          {/*  */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+				{/* private routes */}
+				<Route element={<PrivateRoute />}>
+					{/*  */}
+					{/*  */}
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	);
 };
 
 export default Router;

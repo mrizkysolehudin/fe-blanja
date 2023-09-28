@@ -85,7 +85,7 @@ const Navbar = () => {
 				<div
 					className="d-flex flex-row justify-content-end gap-nav"
 					style={{ width: "30%" }}>
-					<Link to="/cart">
+					<Link to="/mybag">
 						<i className="bi bi-cart2 fs-4 text-gray"></i>
 					</Link>
 					<div>
