@@ -40,7 +40,7 @@ const Navbar = () => {
 	return (
 		<div
 			className="position-absolute bg-white d-flex flex-row align-items-center nav-shadow"
-			style={{ width: "100%", height: "15%" }}>
+			style={{ width: "100%", height: "15%", zIndex: 999 }}>
 			<div className="d-flex flex-row" style={{ width: "70%" }}>
 				<div className="ms-nav">
 					<Link to="/">
@@ -122,7 +122,6 @@ const Navbar = () => {
 								style={{ fontSize: 9 }}>
 								Profile
 							</Link>
-							{console.log(role)}
 							{role === 0 && (
 								<Link
 									to="/my-products"
