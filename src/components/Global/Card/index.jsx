@@ -21,9 +21,9 @@ const Card = ({ item = { image: "" } }) => {
 								{getFirstThreeWords(item?.name)}
 							</h4>
 							<div>
-								<h5 className="text-danger metropolis-b">$ 40.0</h5>
+								<h5 className="text-danger metropolis-b">$ {item?.price}</h5>
 								<span className="card-text text-secondary text-break">
-									Zalora Cloth
+									{item?.store_name}
 								</span>
 								<div>
 									<img src={iconStar} alt="Star" />
