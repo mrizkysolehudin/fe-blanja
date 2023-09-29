@@ -76,7 +76,7 @@ const Navbar = () => {
 					type="button"
 					className="btn btn-light border-gray"
 					data-bs-toggle="modal"
-					data-bs-target="#exampleModal">
+					data-bs-target="#filter">
 					<i className="bi bi-funnel"></i>
 				</button>
 			</div>

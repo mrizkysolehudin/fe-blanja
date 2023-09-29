@@ -1,0 +1,46 @@
+#filter .custom-radios div {
+  display: inline-block;
+}
+#filter .custom-radios input[type="radio"] {
+  display: none;
+}
+
+#filter .custom-radios input[type="radio"] + label span {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.43);  
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 44px;
+}
+
+#filter .custom-radios input[type="radio"]:checked + label span {
+  box-shadow:
+    0 0 0 3px #fff,
+    0 0 0 4px #DB3022;
+}
+
+#filter .custom-radios input[type="radio"]#color-1 + label span {
+  background-color: #020202;
+}
+#filter .custom-radios input[type="radio"]#color-2 + label span {
+  background-color: #fff;  
+}
+#filter .custom-radios input[type="radio"]#color-3 + label span {
+  background-color: #B82222;
+}
+#filter .custom-radios input[type="radio"]#color-4 + label span {
+  background-color: #BEA9A9;
+}
+#filter .custom-radios input[type="radio"]#color-5 + label span {
+  background-color: #E2BB8D;
+}
+#filter .custom-radios input[type="radio"]#color-6 + label span {
+  background-color: #151867;
+}
+
