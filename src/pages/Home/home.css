@@ -1,117 +1,140 @@
 .navbar {
-	position: absolute;
-	margin-top: 3%;
+  position: absolute;
+  margin-top: 3%;
 }
 #page-home .carousel {
-	margin-top: 2%;
+  margin-top: 2%;
 }
 
 #page-home .title-category h1 {
-	color: var(--Black, #222);
-	font-family: Metropolis;
-	font-size: 34px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	margin-left: 6%;
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 6%;
 }
 #page-home .title-category p {
-	color: var(--Gray, #9b9b9b);
-	font-family: Metropolis;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	margin-left: 6%;
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 6%;
 }
-#page-home .category1 {
-	border-radius: 8px;
-	background: #cc0b04;
+
+/* #page-home .category1 {
+  border-radius: 8px;
+  background: #cc0b04;
 }
 #page-home .category2 {
-	border-radius: 8px;
-	background: #1c3391;
+  border-radius: 8px;
+  background: #1c3391;
 }
 #page-home .category3 {
-	border-radius: 8px;
-	background: #f67b02;
+  border-radius: 8px;
+  background: #f67b02;
 }
 #page-home .category4 {
-	border-radius: 8px;
-	background: #e31f51;
+  border-radius: 8px;
+  background: #e31f51;
 }
 #page-home .category5 {
-	border-radius: 8px;
-	background: #57cd9e;
-}
+  border-radius: 8px;
+  background: #57cd9e;
+} */
 #page-home .category p {
-	color: #fff;
-	font-family: Metropolis;
-	font-size: 30px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
+  color: #fff;
+  font-family: Metropolis;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 #page-home .category {
-	/* width: 12vw;
+  /* width: 12vw;
   height: 12vw; */
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page-home .category {
+  border-radius: 15px;
+  width: 100%;
+  height: 16vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+#page-home .category img {
+  width: 130x;
+  height: 146px;
+  flex-shrink: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #page-home .title-name {
-	font-size: 2rem;
-	text-align: center;
-	text-shadow: 2px 2px 4px #000000;
-	margin-top: 20%;
+  font-size: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  /* margin-top: 20%; */
+  display: flex;
+  justify-content: center;
 }
 #page-home .title-new h1 {
-	color: var(--Black, #222);
-	font-family: Metropolis;
-	font-size: 34px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	margin-left: 6%;
-	margin-top: 2%;
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 6%;
+  margin-top: 2%;
 }
 #page-home .title-new p {
-	color: var(--Gray, #9b9b9b);
-	font-family: Metropolis;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	margin-left: 6%;
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 6%;
 }
 #page-home .content {
-	width: 208px;
-	height: 278px;
-	flex-shrink: 0;
+  width: 208px;
+  height: 278px;
+  flex-shrink: 0;
 }
 #page-home .title-popular h1 {
-	color: var(--Black, #222);
-	font-family: Metropolis;
-	font-size: 34px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	margin-left: 6%;
-	margin-top: 7%;
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 6%;
+  margin-top: 7%;
 }
 #page-home .title-popular p {
-	color: var(--Gray, #9b9b9b);
-	font-family: Metropolis;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	margin-left: 6%;
+  color: var(--Gray, #9b9b9b);
+  font-family: Metropolis;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 6%;
 }
 
 #page-home a {
-	text-decoration: none;
+  text-decoration: none;
 }
