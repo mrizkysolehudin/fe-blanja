@@ -1,12 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Card from "../../components/Global/Card";
-import Image from "../../assets/img/bajukoko.png";
-import Image2 from "../../assets/img/bajukoko1.png";
 import Iconstar from "../../assets/icons/icon-star.svg";
 import "./product.css";
+import httpJson from "../../helpers/http";
+import { baseUrl } from "../../helpers/baseUrl";
 
 const Product = () => {
+	const { id } = useParams();
+	const navigate = useNavigate();
+
+	const [data, setData] = useState([]);
+
+	useEffect(() => {
+		getProductById(id);
+	}, [id]);
+
+	const getProductById = async (id) => {
+		try {
+			const response = await httpJson().get(`${baseUrl}/product/${id}`);
+
+			const result = response.data.data[0];
+			setData(result);
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	console.log(data);
+
 	return (
 		<main id="product-page">
 			<div className="container mt-5">
@@ -27,29 +49,29 @@ const Product = () => {
 					<div className="row">
 						<section className="col-lg-4">
 							<div className="model container ">
-								<img src={Image} className="rounded img-fluid" alt="" />
+								<img src={data?.image} className="rounded img-fluid" alt="" />
 							</div>
 							<div className="col-auto mt-4">
 								<img
-									src={Image2}
+									src={data?.image}
 									className="rounded mx-2 img-fluid"
 									style={{ width: "65px" }}
 									alt=""
 								/>
 								<img
-									src={Image2}
+									src={data?.image}
 									className="rounded mx-2"
 									style={{ width: "65px" }}
 									alt=""
 								/>
 								<img
-									src={Image2}
+									src={data?.image}
 									className="rounded mx-2"
 									style={{ width: "65px" }}
 									alt=""
 								/>
 								<img
-									src={Image}
+									src={data?.image}
 									className="rounded mx-2"
 									style={{ width: "65px" }}
 									alt=""
@@ -58,8 +80,8 @@ const Product = () => {
 						</section>
 						<section className="col-lg-6">
 							<div className="title">
-								<h1>Baju Muslim Pria</h1>
-								<p>Zalora Cloth</p>
+								<h1>{data.name}</h1>
+								<p>{data?.store_name}</p>
 							</div>
 							<div className="d-flex align-items-center">
 								<img src={Iconstar} alt="Star" />
@@ -72,16 +94,16 @@ const Product = () => {
 
 							<div className="price mt-4">
 								<p className="my-0">Price</p>
-								<h1>$ 20.0</h1>
+								<h1>$ {data?.price}</h1>
 							</div>
 
 							<div className="color mt-4">
 								<p className="my-0">Color</p>
 								<select class="form-select" aria-label="Default select example">
 									<option selected>Select Color</option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
+									<option value="1">White</option>
+									<option value="2">Black</option>
+									<option value="3">Red</option>
 								</select>
 							</div>
 
@@ -118,7 +140,10 @@ const Product = () => {
 								<button type="button" class="btn btn-outline-dark me-2 flex-grow-3">
 									Add Bag
 								</button>
-								<button type="button" class="btn btn-danger me-2 flex-grow-1">
+								<button
+									onClick={() => navigate("/checkout")}
+									type="button"
+									class="btn btn-danger me-2 flex-grow-1">
 									Buy Now
 								</button>
 							</div>
@@ -130,24 +155,11 @@ const Product = () => {
 						<h1>Informasi Produk</h1>
 						<div className="condition mt-5">
 							<h2>Condition</h2>
-							<h1>New</h1>
+							<h1 className="capitalize">{data?.condition}</h1>
 						</div>
 						<div className="description mt-5">
 							<h2>Description</h2>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non magna
-								rutrum, pellentesque augue eu, sagittis velit. Phasellus quis laoreet
-								dolor. Fusce nec pharetra quam. Interdum et malesuada fames ac ante
-								ipsum primis in faucibus. Praesent sed enim vel turpis blandit imperdiet
-								ac ac felis. Etiam tincidunt tristique placerat. Pellentesque a
-								consequat mauris, vel suscipit ipsum. Donec ac mauris vitae diam commodo
-								vehicula. Donec quam elit, sollicitudin eu nisl at, ornare suscipit
-								magna. Donec non magna rutrum, pellentesque augue eu, sagittis velit.
-								Phasellus quis laoreet dolor. Fusce nec pharetra quam. Interdum et
-								malesuada fames ac ante ipsum primis in faucibus. Praesent sed enim vel
-								turpis blandit imperdiet ac ac felis. In ultricies rutrum tempus. Mauris
-								vel molestie orci.
-							</p>
+							<p>{data?.description}</p>
 						</div>
 						<div className="mt-5">
 							<h1>Product Review</h1>
@@ -173,7 +185,7 @@ const Product = () => {
 					</div>
 				</div>
 				<div className="content row mt-5" style={{ marginRight: "20%" }}>
-					<Card />
+					<Card item={data} />
 				</div>
 			</div>
 		</main>

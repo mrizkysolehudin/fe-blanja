@@ -3,7 +3,6 @@ import iconStar from "../../../assets/icons/icon-star.svg";
 import { getFirstThreeWords } from "../../../utils/getThreeWords";
 import { Link } from "react-router-dom";
 
-
 const Card = ({ item = { image: "" } }) => {
 	return (
 		<div className="row g-4">
@@ -18,9 +17,12 @@ const Card = ({ item = { image: "" } }) => {
 						src={item?.image}
 						className="card-img-top"
 						alt="cardImage"
+						style={{ height: "136px" }}
 					/>
 					<div className="card-body d-flex flex-column justify-content-between">
-						<h4 className="card-title text-dark">{getFirstThreeWords(item?.name)}</h4>
+						<h4 className="card-title text-dark" style={{ fontSize: "16px" }}>
+							{getFirstThreeWords(item?.name)}
+						</h4>
 						<div>
 							<h5 className="text-danger metropolis-b">$ {item?.price}</h5>
 							<span className="card-text text-secondary text-break">
