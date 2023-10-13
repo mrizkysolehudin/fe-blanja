@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./nav.css";
-import svgLogo from "../../../assets/profile/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
-import svgDp from "../../../assets/profile/dp.svg";
+import "./nav.css";
+import svgLogo from "../../../assets/img/navbar/logo.svg";
+import svgDp from "../../../assets/img/navbar/dp.svg";
 import { useDispatch } from "react-redux";
 import { logoutAction } from "../../../redux/reducers/authSlice";
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 	return (
 		<div
 			className="position-absolute bg-white d-flex flex-row align-items-center nav-shadow"
-			style={{ width: "100%", height: "15%", zIndex: 999 }}>
+			style={{ width: "100%", height: "100px", zIndex: 999 }}>
 			<div className="d-flex flex-row" style={{ width: "70%" }}>
 				<div className="ms-nav">
 					<Link to="/">
