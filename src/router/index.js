@@ -32,37 +32,19 @@ const Router = () => {
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 
-<<<<<<< HEAD
 					{/* private routes */}
 					<Route element={<PrivateRoute />}>
 						<Route path="/mybag" element={<MyBagPage />} />
 						<Route path="/checkout" element={<Checkout />} />
 						<Route path="/profile" element={<ProfileCostumer />} />
 						<Route path="/my-products" element={<MyProducts />} />
-						{/*  */}
-						{/*  */}
 					</Route>
 				</Routes>
 				<FilterModal />
 			</div>
 		</BrowserRouter>
 	);
-=======
-          {/* private routes */}
-          <Route element={<PrivateRoute />}>
-            <Route path="/mybag" element={<MyBagPage />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/my-products" element={<MyProducts />} />
-            {/*  */}
-            {/*  */}
-          </Route>
-        </Routes>
-        <FilterModal />
-      </div>
-    </BrowserRouter>
-  );
->>>>>>> ff62c89de8cf94525fc37a163f3ae51bdc108acb
+
 };
 
 export default Router;
