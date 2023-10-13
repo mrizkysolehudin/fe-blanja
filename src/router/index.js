@@ -4,7 +4,7 @@ import PrivateRoute from "../components/Global/PrivateRoute";
 import HomePage from "../pages/Home";
 import LoginPage from "../pages/Login";
 import RegisterPage from "../pages/Register";
-import ProfilePage from "../pages/Profile";
+import ProfileCostumer from "../pages/Profile/Costumer";
 import NotFoundPage from "../pages/NotFound";
 import MyBagPage from "../pages/MyBag";
 import Checkout from "../pages/Checkout";
@@ -36,7 +36,7 @@ const Router = () => {
 					<Route element={<PrivateRoute />}>
 						<Route path="/mybag" element={<MyBagPage />} />
 						<Route path="/checkout" element={<Checkout />} />
-						<Route path="/profile" element={<ProfilePage />} />
+						<Route path="/profile" element={<ProfileCostumer />} />
 						<Route path="/my-products" element={<MyProducts />} />
 						{/*  */}
 						{/*  */}
