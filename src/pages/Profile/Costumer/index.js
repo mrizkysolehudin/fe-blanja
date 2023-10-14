@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../../components/Global/Navbar/index";
 import Sidebar from "../../../components/Profile/SidebarCostumer";
-// import FormProfile from "../../../components/Profile/FormProfile";
-import FormProfile from "./my_profile";
+import MyAccount from "./my_account";
 import Address from "./address";
 import MyOrder from "./my_order";
-import "./profile.css";
+import "./index.css";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -81,7 +80,7 @@ const ProfilePage = () => {
 	return (
 		<div id="page-profile" className="container-float">
 			<Navbar />
-			<div className="d-flex flex-row height-content">
+			<div className="profile">
 				{/* Sidebar */}
 				<Sidebar
 					currentUser={currentUser}
@@ -89,29 +88,17 @@ const ProfilePage = () => {
 					openTab={openTab}
 				/>
 
-				{/* Content */}
-				{openTab === "my_account" && (
-					<div id="content-profile" className="bg-lightGray mt-5 mt-sm-4 mt-xl-0">
-						<div className="border bg-white content ">
-							<div className="row mx-3 " style={{ marginTop: "3.5%" }}>
-								<div className="col ">
-									<h5 className="fw-bold ">My Profile</h5>
-									<p className="fs-09 text-gray2">Manage your profile Information</p>
-									<hr />
-								</div>
-							</div>
-
-							<FormProfile
-								data={data}
-								isLoading={isLoading}
-								showImage={showImage}
-								handleChangeImage={handleChangeImage}
-								handleChange={handleChange}
-								handleSubmit={handleSubmit}
-								image={image}
-							/>
-						</div>
-					</div>
+				{/* My Account */}
+				{openTab === "my_account" && ( 
+          <MyAccount
+            data={data}
+            isLoading={isLoading}
+            showImage={showImage}
+            handleChangeImage={handleChangeImage}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            image={image}
+          />
 				)}
 
         {openTab === "shipping_address" && (

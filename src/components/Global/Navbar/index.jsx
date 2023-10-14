@@ -38,9 +38,7 @@ const Navbar = () => {
 	};
 
 	return (
-		<div
-			className="position-absolute bg-white d-flex flex-row align-items-center nav-shadow"
-			style={{ width: "100%", height: "100px", zIndex: 999 }}>
+		<div id="navbar" className="nav-container">
 			<div className="d-flex flex-row" style={{ width: "70%" }}>
 				<div className="ms-nav">
 					<Link to="/">
@@ -56,17 +54,15 @@ const Navbar = () => {
 						value={searchTerm}
 						onChange={(e) => setSearchTerm(e.target.value)}
 						onKeyDown={handleKeyDown}
-						className="form-control me-2 py-2 ps-3 pe-5 border-gray"
+						className="form-control input-search"
 						type="search"
 						placeholder="Search"
 						aria-label="Search"
-						style={{ borderRadius: "20px" }}
 					/>
 					<button
 						onClick={handleSearch}
-						className="btn btn-search position-absolute"
-						type="button"
-						style={{ right: "18px", top: "2px" }}>
+						className="btn btn-search"
+						type="button">
 						<i className="bi bi-search fs-6"></i>
 					</button>
 				</form>
@@ -104,21 +100,10 @@ const Navbar = () => {
 					/>
 
 					{isToggleOpen && (
-						<div
-							style={{
-								position: "absolute",
-								marginTop: "3.6vw",
-								marginRight: "4vw",
-								padding: "5px 5px 5px",
-								backgroundColor: "rgba(210, 210, 210, 0.6)",
-								borderRadius: 6,
-								display: "flex",
-								flexDirection: "column",
-								gap: 4,
-							}}>
+						<div className="toggle-profile">
 							<Link
 								to="/profile"
-								className="btn btn-secondary py-1"
+								className="btn btn-secondary py-1 mb-2"
 								style={{ fontSize: 9 }}>
 								Profile
 							</Link>
