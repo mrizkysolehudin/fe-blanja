@@ -5,6 +5,7 @@ import HomePage from "../pages/Home";
 import LoginPage from "../pages/Login";
 import RegisterPage from "../pages/Register";
 import ProfileCostumer from "../pages/Profile/Costumer";
+import ProfileSeller from "../pages/Profile/Seller";
 import NotFoundPage from "../pages/NotFound";
 import MyBagPage from "../pages/MyBag";
 import Checkout from "../pages/Checkout";
@@ -28,6 +29,7 @@ const Router = () => {
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/category/:id" element={<CategoryPage />} />
+            <Route path="/profile-seller" element={<ProfileSeller />} />
 
             <Route path="*" element={<NotFoundPage />} />
           </Route>

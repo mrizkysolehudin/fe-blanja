@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../../components/Global/Navbar/index";
-import Sidebar from "../../../components/Profile/SidebarCostumer";
+import SidebarCostumer from "../../../components/Profile/SidebarCostumer";
 import MyAccount from "./my_account";
 import Address from "./address";
 import MyOrder from "./my_order";
@@ -81,14 +81,13 @@ const ProfilePage = () => {
 		<div id="page-profile" className="container-float">
 			<Navbar />
 			<div className="profile">
-				{/* Sidebar */}
-				<Sidebar
+				{/* Sidebar Costumer */}
+				<SidebarCostumer
 					currentUser={currentUser}
 					setOpenTab={setOpenTab}
 					openTab={openTab}
 				/>
 
-				{/* My Account */}
 				{openTab === "my_account" && ( 
           <MyAccount
             data={data}
@@ -108,7 +107,10 @@ const ProfilePage = () => {
         {openTab === "my_order" && (
           <MyOrder />
         )}
+
 			</div>
+
+      
 
 			<FilterModal />
 		</div>
