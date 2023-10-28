@@ -1,7 +1,7 @@
 import React from "react";
 import svgIconAccount from "../../assets/img/profile/seller/icon-store.svg";
-import svgIconLocate from "../../assets/img/profile/costumer/icon-locate.svg";
-import svgIconMyOrder from "../../assets/img/profile/costumer/icon-myorder.svg";
+import svgIconLocate from "../../assets/img/profile/seller/icon-product.svg";
+import svgIconMyOrder from "../../assets/img/profile/seller/icon-order.svg";
 import './SidebarSeller.css';
 
 
