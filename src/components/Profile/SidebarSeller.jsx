@@ -1,7 +1,7 @@
 import React from "react";
 import svgIconAccount from "../../assets/img/profile/seller/icon-store.svg";
-import svgIconLocate from "../../assets/img/profile/costumer/icon-locate.svg";
-import svgIconMyOrder from "../../assets/img/profile/costumer/icon-myorder.svg";
+import svgIconLocate from "../../assets/img/profile/seller/icon-product.svg";
+import svgIconMyOrder from "../../assets/img/profile/seller/icon-order.svg";
 import './SidebarSeller.css';
 
 
@@ -11,8 +11,10 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
   const [order, setOrder] = React.useState(false);
 
   function handleStore() {
-    if (store) setStore(false);
-    else {
+    if (store) {
+      setStore(false);
+      setOpenTab("store");
+    } else {
       setOpenTab("store");
       setStore(true);
       setProduct(false);
@@ -21,8 +23,10 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
   }
 
   function handleProduct() {
-    if (product) setProduct(false);
-    else {
+    if (product) {
+      setProduct(false);
+      setOpenTab("product");
+    } else {
       setOpenTab("product");
       setStore(false);
       setProduct(true);
@@ -31,8 +35,10 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
   }
 
   function handleOrder() {
-    if (order) setOrder(false);
-    else {
+    if (order) {
+      setOrder(false);
+      setOpenTab("order");
+    } else {
       setOpenTab("order");
       setStore(false);
       setProduct(false);

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../../components/Global/Navbar/index";
 import SidebarSeller from "../../../components/Profile/SidebarSeller";
-import TestOrder from '../Costumer/my_order'
-import MyOrder from "./my_order";
-import MyProduct from "./my_product";
-import OrderProfile from "./order_cancel";
-import SellingProduct from "./selling_product";
+// import TestOrder from '../Costumer/my_order';
 import StoreProfile from "./store_profile";
+import MyProduct from "./my_product";
+import SellingProduct from "./selling_product";
+import MyOrder from "./my_order";
+import OrderProfile from "./order_cancel";
+
+
 
 import "./index.css";
 
@@ -23,7 +25,7 @@ const SellerProfile = () => {
 	const currentUser = useSelector((state) => state.getOneCustomer.data);
 	const { isLoading, isEdited } = useSelector((state) => state.editCustomer);
 
-	const [openTab, setOpenTab] = useState("my_account");
+	const [openTab, setOpenTab] = useState("store_profile");
 	const [image, setImage] = useState("");
 	const [showImage, setShowImage] = useState("");
 	const [data, setData] = useState({
@@ -92,31 +94,29 @@ const SellerProfile = () => {
 					openTab={openTab}
 				/>
 
-        <TestOrder />
+        {/* <TestOrder /> */}
 
-				{/* {openTab === "my_account" && ( 
-          <MyAccount
-            data={data}
-            isLoading={isLoading}
-            showImage={showImage}
-            handleChangeImage={handleChangeImage}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            image={image}
-          />
-				)}
-
-        {openTab === "shipping_address" && (
-          <Address />
+        {(openTab === "store_profile" || openTab === "store") && (
+          <StoreProfile />
         )}
 
-        {openTab === "my_order" && (
+        {(openTab === "my_products" || openTab === "product") && (
+          <MyProduct />
+        )}
+
+        {openTab === "selling" && (
+          <SellingProduct />
+        )}
+
+        {(openTab === "my_order" || openTab === "order") && (
           <MyOrder />
-        )} */}
+        )}
+
+        {openTab === "order_cancel" && (
+          <OrderProfile />
+        )}
 
 			</div>
-
-      
 
 			<FilterModal />
 		</div>
