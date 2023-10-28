@@ -11,8 +11,10 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
   const [order, setOrder] = React.useState(false);
 
   function handleStore() {
-    if (store) setStore(false);
-    else {
+    if (store) {
+      setStore(false);
+      setOpenTab("store");
+    } else {
       setOpenTab("store");
       setStore(true);
       setProduct(false);
@@ -21,8 +23,10 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
   }
 
   function handleProduct() {
-    if (product) setProduct(false);
-    else {
+    if (product) {
+      setProduct(false);
+      setOpenTab("product");
+    } else {
       setOpenTab("product");
       setStore(false);
       setProduct(true);
@@ -31,8 +35,10 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
   }
 
   function handleOrder() {
-    if (order) setOrder(false);
-    else {
+    if (order) {
+      setOrder(false);
+      setOpenTab("order");
+    } else {
       setOpenTab("order");
       setStore(false);
       setProduct(false);
