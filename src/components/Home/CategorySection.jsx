@@ -24,15 +24,24 @@ const CategorySection = ({
             <Link to={`/category/${item?.id}`}>
               <div
                 key={index}
-                className=" d-flex rounded-3` "
+                className=" d-flex rounded-3 "
                 style={{
-                  marginLeft: "6%",
+                  marginLeft: "5%",
                   borderRadius: "8px",
                   backgroundColor: item?.color,
+                  display: "flex",
+                  alignItems: "center",
+                  textAlign: "center",
+                  justifyContent: "center",
+                  flexDirection: "column  ",
                 }}
               >
-                <img src={item?.image} alt={item?.name} />
-                <p className="title-name  text-center">{item?.name}</p>
+                <img
+                  src={item?.image}
+                  alt={item?.name}
+                  style={{ display: "block", maxWidth: "100%" }}
+                />
+                <p className="title-name">{item?.name}</p>
               </div>
             </Link>
           ))
