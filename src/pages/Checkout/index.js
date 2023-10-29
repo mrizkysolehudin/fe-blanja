@@ -1,8 +1,8 @@
 import React from "react";
-// import s from "./checkout.module.css";
 import "./checkout.css";
 import Navbar from "../../components/Global/Navbar/index";
 import FilterModal from "../../components/Global/FilterModal";
+import AddressModal from "../../components/Global/AddressModal";
 
 import svgPesanan1 from "../../assets/img/checkout/pesanan1.svg";
 import svgPesanan2 from "../../assets/img/checkout/pesanan2.svg";
@@ -25,7 +25,10 @@ const Checkout = () => {
           <div className="mycard card-address">
             <h6 className="fw-bold">Andreas Jane</h6>
             <p style={{ fontSize: "0.85rem" }}>Perumahan Sapphire Mediterania, Wiradadi, Kec. Sokaraja, Kabupaten Banyumas, Jawa Tengah, 53181 [Tokopedia Note: blok c 16] Sokaraja, Kab. Banyumas, 53181</p>
-            <button className="btn-address mt-1">Choose another address</button>
+            {/* Button trigger modal */}
+            <button type="button" class="btn-address mt-1" data-bs-toggle="modal" data-bs-target="#address">
+              Choose another address
+            </button>
           </div>
 
           {/* Card Product 1 */}
@@ -113,6 +116,7 @@ const Checkout = () => {
       </div>
 
       <FilterModal />
+      <AddressModal />
     </div>    
   )
 }

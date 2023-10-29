@@ -4,7 +4,8 @@ import PrivateRoute from "../components/Global/PrivateRoute";
 import HomePage from "../pages/Home";
 import LoginPage from "../pages/Login";
 import RegisterPage from "../pages/Register";
-import ProfilePage from "../pages/Profile";
+import ProfileCostumer from "../pages/Profile/Costumer";
+import ProfileSeller from "../pages/Profile/Seller";
 import NotFoundPage from "../pages/NotFound";
 import MyBagPage from "../pages/MyBag";
 import Checkout from "../pages/Checkout";
@@ -28,24 +29,24 @@ const Router = () => {
             <Route path="/search-page" element={<SearchPage />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="/category/:id" element={<CategoryPage />} />
+            <Route path="/profile-seller" element={<ProfileSeller />} />
 
             <Route path="*" element={<NotFoundPage />} />
           </Route>
 
-          {/* private routes */}
-          <Route element={<PrivateRoute />}>
-            <Route path="/mybag" element={<MyBagPage />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/my-products" element={<MyProducts />} />
-            {/*  */}
-            {/*  */}
-          </Route>
-        </Routes>
-        <FilterModal />
-      </div>
-    </BrowserRouter>
-  );
+					{/* private routes */}
+					<Route element={<PrivateRoute />}>
+						<Route path="/mybag" element={<MyBagPage />} />
+						<Route path="/checkout" element={<Checkout />} />
+						<Route path="/profile" element={<ProfileCostumer />} />
+						<Route path="/my-products" element={<MyProducts />} />
+					</Route>
+				</Routes>
+				<FilterModal />
+			</div>
+		</BrowserRouter>
+	);
+
 };
 
 export default Router;
