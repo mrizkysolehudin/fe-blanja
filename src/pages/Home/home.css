@@ -18,33 +18,13 @@
 #page-home .title-category p {
   color: var(--Gray, #9b9b9b);
   font-family: Metropolis;
-  font-size: 12px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   margin-left: 6%;
 }
 
-/* #page-home .category1 {
-  border-radius: 8px;
-  background: #cc0b04;
-}
-#page-home .category2 {
-  border-radius: 8px;
-  background: #1c3391;
-}
-#page-home .category3 {
-  border-radius: 8px;
-  background: #f67b02;
-}
-#page-home .category4 {
-  border-radius: 8px;
-  background: #e31f51;
-}
-#page-home .category5 {
-  border-radius: 8px;
-  background: #57cd9e;
-} */
 #page-home .category p {
   color: #fff;
   font-family: Metropolis;
@@ -73,23 +53,26 @@
   cursor: pointer;
 }
 #page-home .category img {
-  width: 130x;
+  width: 200px;
   height: 146px;
+  display: block;
   flex-shrink: 0;
+  margin: 0 auto;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 }
 #page-home .title-name {
   font-size: 2rem;
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
+  position: absolute;
   /* margin-top: 20%; */
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 #page-home .title-new h1 {
   color: var(--Black, #222);
