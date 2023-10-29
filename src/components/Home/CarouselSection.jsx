@@ -42,7 +42,7 @@ const CarouselSection = () => {
               data-bs-interval="10000"
               style={{ marginLeft: "8%" }}
             >
-              <div style={{ marginRight: "2%", marginTop: "17px" }}>
+              <div style={{ marginRight: "2%", marginTop: "5px" }}>
                 <img src={Image3} className="d-block w-20" alt="..." />
               </div>
               <div
@@ -103,7 +103,7 @@ const CarouselSection = () => {
                   Black edition
                 </p>
               </div>
-              <div style={{ marginRight: "2%", marginTop: "15px" }}>
+              <div style={{ marginRight: "2%", marginTop: "5px" }}>
                 <img src={Image4} className="d-block w-20" alt="..." />
               </div>
             </div>

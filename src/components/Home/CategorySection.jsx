@@ -24,7 +24,7 @@ const CategorySection = ({
             <Link to={`/category/${item?.id}`}>
               <div
                 key={index}
-                className=" d-flex rounded-3 text-center "
+                className=" d-flex rounded-3 "
                 style={{
                   marginLeft: "5%",
                   borderRadius: "8px",
@@ -34,8 +34,6 @@ const CategorySection = ({
                   textAlign: "center",
                   justifyContent: "center",
                   flexDirection: "column  ",
-                  position: "relative",
-                  textAlign: "center",
                 }}
               >
                 <img
