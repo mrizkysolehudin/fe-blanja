@@ -29,6 +29,35 @@
   gap: 3rem;
 }
 
+
+#my-order .input-icons i {
+  position: absolute;
+}
+
+#my-order .input-icons {
+  width: 220px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+#my-order .icon {
+  padding-top: 6px;
+  color: green;
+  min-width: 50px;
+  text-align: center;
+}
+
+#my-order .input-field {
+  width: 100%;
+  /* padding: 10px; */
+  /* text-align: center; */
+  padding-left: 45px;
+  height: 36px;  
+  border: 1px solid #D4D4D4;
+  border-radius: 20px;
+}
+
+
 @media screen and (max-width: 1024px) {
   #my-order .content {
 		height: 700px;

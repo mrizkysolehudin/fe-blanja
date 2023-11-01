@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../../components/Global/Navbar/index";
 import SidebarSeller from "../../../components/Profile/SidebarSeller";
-// import TestOrder from '../Costumer/my_order';
 import StoreProfile from "./store_profile";
 import MyProduct from "./my_product";
 import SellingProduct from "./selling_product";
 import MyOrder from "./my_order";
-import OrderProfile from "./order_cancel";
-
-
-
+// import OrderProfile from "./order_cancel";
 import "./index.css";
 
 import { useNavigate } from "react-router-dom";
@@ -112,9 +108,9 @@ const SellerProfile = () => {
           <MyOrder />
         )}
 
-        {openTab === "order_cancel" && (
-          <OrderProfile />
-        )}
+        {/* {openTab === "order_cancel" && (
+          <OrderProfile/>
+        )} */}
 
 			</div>
 
