@@ -26,7 +26,9 @@ const cartSlice = createSlice({
 				(item) => item.product_id === action.payload.product_id,
 			);
 			if (itemIndex !== -1) {
-				state.totalPrice -= itemIndex.price_unit || 0;
+				const removedItem = state.cartItems[itemIndex];
+				state.totalPrice -=
+					(removedItem.quantity_unit || 0) * (removedItem.price_unit || 0);
 				state.cartItems.splice(itemIndex, 1);
 			}
 		},

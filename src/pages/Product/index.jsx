@@ -5,7 +5,7 @@ import Iconstar from "../../assets/icons/icon-star.svg";
 import "./product.css";
 import httpJson from "../../helpers/http";
 import { baseUrl } from "../../helpers/baseUrl";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCartAction } from "../../redux/reducers/cartItems/cartItemsSlice";
 
 const Product = () => {

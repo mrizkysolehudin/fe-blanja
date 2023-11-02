@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../../components/Global/Navbar";
 import Svgplus from "../../assets/icons/icon-plus.svg";
 import Svgmin from "../../assets/icons/icon-minus.svg";
