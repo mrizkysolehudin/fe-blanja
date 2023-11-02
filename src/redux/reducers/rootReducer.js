@@ -6,10 +6,12 @@ import registerSellerReducer from "./seller/registerSellerSlice";
 import allProductsReducer from "./product/getAllProductsSlice";
 import deleteProductReducer from "./product/deleteProductSlice";
 import allCategoriesReducer from "./category/getAllCategoriesSlice";
+import cartReducer from "./cartItems/cartItemsSlice";
 import { combineReducers } from "@reduxjs/toolkit";
 
 const rootReducer = combineReducers({
 	userAuth: authReducer,
+	cart: cartReducer,
 	registerCustomer: registerCustomerReducer,
 	getOneCustomer: getOneCustomerReducer,
 	editCustomer: editCustomerReducer,

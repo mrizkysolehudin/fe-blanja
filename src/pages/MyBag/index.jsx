@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/Global/Navbar";
-import Image from "../../assets/img/jacketjeans.png";
-import Image2 from "../../assets/img/jasnew.png";
 import Svgplus from "../../assets/icons/icon-plus.svg";
 import Svgmin from "../../assets/icons/icon-minus.svg";
 import "./mybag.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+	decrementQuantityAction,
+	incrementQuantityAction,
+	removeFromCartAction,
+} from "../../redux/reducers/cartItems/cartItemsSlice";
 
 const MyBagPage = () => {
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const cartItems = useSelector((state) => state.cart.cartItems);
+	const totalPrice = useSelector((state) => state.cart.totalPrice);
 
 	const handleCheckout = (e) => {
 		e.preventDefault();
 		navigate("/checkout");
 	};
 
+	const handleMinusQuantity = (item) => {
+		if (item.quantity_unit === 1) {
+			return dispatch(removeFromCartAction(item));
+		}
+		dispatch(decrementQuantityAction(item));
+	};
+
 	return (
 		<div>
-			{/* Start Navbar */}
 			<Navbar />
-			{/* End Navbar */}
 
 			{/* Content */}
 			<div id="bag-page">
@@ -66,124 +78,76 @@ const MyBagPage = () => {
 								</div>
 
 								{/* content buy item */}
-								<div className="card mb-2" style={{ width: "100%" }}>
-									<div className="card-body d-flex flex-row justify-content-between align-items-center ">
-										<div className="d-flex flex-row ">
-											<div className="d-flex flex-row justify-content-between align-items-center">
-												<input
-													className="form-check-input checkBox d-flex align-items-center me-3"
-													type="checkbox"
-													value=""
-													id="flexCheckIndeterminate"
-												/>
-											</div>
 
-											<div className="d-flex flex-row justify-content-start align-items-center ItemMyOrder">
-												<div>
-													<img
-														src={Image}
-														alt=""
-														className="contentCheckOut me-2 img-fluid"
-														style={{ cursor: "pointer" }}
-													/>
-												</div>
+								{cartItems?.length > 0
+									? cartItems?.map((item, index) => {
+											return (
+												<div key={index} className="card mb-2" style={{ width: "100%" }}>
+													<div className="card-body d-flex flex-row justify-content-between align-items-center ">
+														<div className="d-flex flex-row ">
+															<div className="d-flex flex-row justify-content-between align-items-center">
+																<input
+																	className="form-check-input checkBox d-flex align-items-center me-3"
+																	type="checkbox"
+																	value=""
+																	id="flexCheckIndeterminate"
+																/>
+															</div>
 
-												<div className="me-5">
-													<h4
-														className="navbar-brand ms-2  text-start text-wrap "
-														style={{ marginBottom: "2px", width: "100%" }}>
-														Men's Jacket jeans
-													</h4>
-													<p
-														className="text-muted text-start ms-2 text-wrap "
-														style={{ fontSize: "13px" }}>
-														Zalora Cloth
-													</p>
-												</div>
-												<div className="d-flex flex-row justify-content-between align-items-center">
-													<img
-														src={Svgmin}
-														alt=""
-														className="text-muted me-3 iconNavbar"
-														style={{ cursor: "pointer" }}
-													/>
-													<label className="me-3"> 1 </label>
-													<img
-														src={Svgplus}
-														alt=""
-														className="text-muted iconNavbar"
-														style={{ cursor: "pointer" }}
-													/>
-												</div>
-											</div>
-										</div>
+															<div className="d-flex flex-row justify-content-start align-items-center ItemMyOrder">
+																<div>
+																	<img
+																		src={item?.product?.image}
+																		alt=""
+																		className="contentCheckOut me-2 img-fluid"
+																		style={{
+																			cursor: "pointer",
+																			width: "90px",
+																			height: "69px",
+																		}}
+																	/>
+																</div>
 
-										<div>
-											<div className="price ms-4 end-2">$ 20.0</div>
-										</div>
-									</div>
-								</div>
-								<div className="card mb-2" style={{ width: "100%" }}>
-									<div className="card-body d-flex flex-row justify-content-between align-items-center ">
-										<div className="d-flex flex-row ">
-											<div className="d-flex flex-row justify-content-between align-items-center">
-												<input
-													className="form-check-input checkBox d-flex align-items-center me-3"
-													type="checkbox"
-													value=""
-													id="flexCheckIndeterminate"
-												/>
-											</div>
+																<div className="me-5">
+																	<h4
+																		className="navbar-brand ms-2  text-start text-wrap "
+																		style={{ marginBottom: "2px", width: "100%" }}>
+																		{item?.product?.name}
+																	</h4>
+																	<p
+																		className="text-muted text-start ms-2 text-wrap "
+																		style={{ fontSize: "13px" }}>
+																		{item?.product?.store_name}
+																	</p>
+																</div>
+																<div className="d-flex flex-row justify-content-between align-items-center">
+																	<img
+																		onClick={() => handleMinusQuantity(item)}
+																		src={Svgmin}
+																		alt=""
+																		className="text-muted me-3 iconNavbar"
+																		style={{ cursor: "pointer" }}
+																	/>
+																	<label className="me-3"> {item?.quantity_unit} </label>
+																	<img
+																		onClick={() => dispatch(incrementQuantityAction(item))}
+																		src={Svgplus}
+																		alt=""
+																		className="text-muted iconNavbar"
+																		style={{ cursor: "pointer" }}
+																	/>
+																</div>
+															</div>
+														</div>
 
-											<div className="d-flex flex-row justify-content-start align-items-center ItemMyOrder">
-												<div>
-													<img
-														src={Image2}
-														alt=""
-														className="contentCheckOut me-2 img-fluid"
-														style={{
-															cursor: "pointer",
-															width: "90px",
-															height: "69px",
-														}}
-													/>
+														<div>
+															<div className="price ms-4 end-2">$ {item?.price_unit}</div>
+														</div>
+													</div>
 												</div>
-
-												<div className="me-5">
-													<h4
-														className="navbar-brand ms-2  text-start text-wrap "
-														style={{ marginBottom: "2px", width: "100%" }}>
-														Men's formal suit - Black
-													</h4>
-													<p
-														className="text-muted text-start ms-2 text-wrap "
-														style={{ fontSize: "13px" }}>
-														Zalora Cloth
-													</p>
-												</div>
-												<div className="d-flex flex-row justify-content-between align-items-center">
-													<img
-														src={Svgmin}
-														alt=""
-														className="text-muted me-3 iconNavbar"
-														style={{ cursor: "pointer" }}
-													/>
-													<label className="me-3"> 1 </label>
-													<img
-														src={Svgplus}
-														alt=""
-														className="text-muted iconNavbar"
-														style={{ cursor: "pointer" }}
-													/>
-												</div>
-											</div>
-										</div>
-
-										<div>
-											<div className="price ms-4 end-2">$ 20.0</div>
-										</div>
-									</div>
-								</div>
+											);
+									  })
+									: ""}
 							</div>
 
 							<div className="card cardCost" style={{ width: "30%" }}>
@@ -193,7 +157,7 @@ const MyBagPage = () => {
 										className="d-flex flex-row justify-content-between"
 										style={{ marginTop: "10%" }}>
 										<p className="total">Total price</p>
-										<p className="text-danger">$ 40.0</p>
+										<p className="text-danger">$ {totalPrice || 0}</p>
 									</div>
 									<button
 										onClick={(e) => handleCheckout(e)}

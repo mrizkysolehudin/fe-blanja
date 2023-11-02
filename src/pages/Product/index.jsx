@@ -5,12 +5,16 @@ import Iconstar from "../../assets/icons/icon-star.svg";
 import "./product.css";
 import httpJson from "../../helpers/http";
 import { baseUrl } from "../../helpers/baseUrl";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCartAction } from "../../redux/reducers/cartItems/cartItemsSlice";
 
 const Product = () => {
 	const { id } = useParams();
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
 	const [data, setData] = useState([]);
+	const [quantity, setQuantity] = useState(1);
 
 	useEffect(() => {
 		getProductById(id);
@@ -27,7 +31,47 @@ const Product = () => {
 		}
 	};
 
-	console.log(data);
+	const handlePlusQuantity = () => {
+		if (quantity < data?.stock) {
+			setQuantity((prev) => prev + 1);
+		}
+	};
+
+	const handleMinusQuantity = () => {
+		if (quantity > 1) {
+			setQuantity((prev) => prev - 1);
+		}
+	};
+
+	// const handleAddToCart = (newItem) => {
+	// 	const existingCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+	// 	const item = {
+	// 		product_id: newItem?.id,
+	// 		quantity_unit: quantity,
+	// 		price_unit: newItem?.price,
+	// 		product: newItem,
+	// 	};
+
+	// 	existingCartItems.push(item);
+
+	// 	localStorage.setItem("cartItems", JSON.stringify(existingCartItems));
+
+	// 	navigate("/mybag");
+	// };
+
+	const handleAddToCart = (newItem) => {
+		const item = {
+			product_id: newItem?.id,
+			quantity_unit: quantity,
+			price_unit: newItem?.price,
+			product: newItem,
+		};
+
+		dispatch(addToCartAction(item));
+
+		navigate("/mybag");
+	};
 
 	return (
 		<main id="product-page">
@@ -80,7 +124,7 @@ const Product = () => {
 						</section>
 						<section className="col-lg-6">
 							<div className="title">
-								<h1>{data.name}</h1>
+								<h1>{data?.name}</h1>
 								<p>{data?.store_name}</p>
 							</div>
 							<div className="d-flex align-items-center">
@@ -114,7 +158,7 @@ const Product = () => {
 										<button type="button" className="btn btn-dark">
 											-
 										</button>
-										<span className="num">0</span>
+										<span className="num px-2">0</span>
 										<button type="button" className="btn btn-outline-dark">
 											+
 										</button>
@@ -123,11 +167,17 @@ const Product = () => {
 								<div className="d-flex flex-column">
 									<p>Jumlah</p>
 									<div>
-										<button type="button" className="btn btn-dark">
+										<button
+											onClick={() => handleMinusQuantity()}
+											type="button"
+											className="btn btn-dark">
 											-
 										</button>
-										<span className="num">0</span>
-										<button type="button" className="btn btn-outline-dark">
+										<span className="num px-2">{quantity}</span>
+										<button
+											onClick={() => handlePlusQuantity()}
+											type="button"
+											className="btn btn-outline-dark">
 											+
 										</button>
 									</div>
@@ -137,7 +187,10 @@ const Product = () => {
 								<button type="button" class="btn btn-outline-dark me-2 flex-grow-3">
 									Chat
 								</button>
-								<button type="button" class="btn btn-outline-dark me-2 flex-grow-3">
+								<button
+									onClick={() => handleAddToCart(data)}
+									type="button"
+									class="btn btn-outline-dark me-2 flex-grow-3">
 									Add Bag
 								</button>
 								<button
