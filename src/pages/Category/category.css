@@ -1,0 +1,7 @@
+#category {
+  display: flex;
+  flex-direction: column;
+}
+#category .navigate ol {
+  margin-top: 8em;
+}
