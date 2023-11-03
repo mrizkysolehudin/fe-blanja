@@ -1,16 +1,23 @@
-<h1 align="center">Blanja Web Application</h1>
+<p align="right">Frontend Web</p> 
 
- <p align="center">
-    <!--  -->
- </p>
 
-### Built With
+# Blanja
 
-This app was built with some technologies below:
 
-- [React Js](https://reactjs.org)
-- [Bootstrap](https://www.npmjs.com/package/bootstrap)
-- [Redux](https://www.npmjs.com/package/redux)
-- [React-redux](https://www.npmjs.com/package/react-redux)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=id)
-- [Javascript](https://www.javascript.com/)
+## Feature
+
+
+## Built With
+
+
+## Installation
+
+
+## Screenshot
+
+## Demo
+
+## Related Project
+
+## Created By
+[Putra Prasetya](https://github.com/putrapr)  
