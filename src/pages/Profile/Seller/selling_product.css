@@ -1,0 +1,109 @@
+/* | Screen > 1024 px | */
+#selling {
+  background-color: #f5f5f5;
+  width: 71%;
+  height: 2000px;
+}
+
+#selling .content{
+	width: 89%;
+	margin-left: 5%;
+	border-radius: 4px;
+  padding: 30px 0;
+  background-color: white;
+}
+
+#selling .labeling{
+	padding: 0;
+  font-size: 14px;
+  color: #9B9B9B;
+}
+
+#selling .form-check-input:checked {
+  background-color: #DB3022;
+  border-color: #DB3022;
+}
+
+#selling .form-check-input:focus {
+  box-shadow: none;
+}
+
+#selling .frame-photo {
+  margin: .7rem 2rem;
+  border: 1px dashed #D4D4D4;
+}
+
+#selling .text-photo {
+  color: #9B9B9B; 
+  font-size: 14px; 
+  margin-top: .5rem;
+  margin-left: 70px;
+}
+
+#selling .btn-upload {
+  width: 160px;
+	height: 36px;
+  border-radius: 24px;
+  color: #9B9B9B;
+  font-size: 14px;
+  border: 1px solid #9B9B9B;
+  border-radius: 24px;
+  background-color: white;
+  padding-top: 2px;
+}
+
+#selling .btn-upload:active {
+	background-color: rgb(228, 228, 228);
+}
+
+#selling .btn-position {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3.5rem;
+  margin-top: 3rem;
+}
+
+
+
+
+#selling .btn-jual {
+	width: 128px;
+	height: 48px;
+	background-color: #db3022;
+	color: white;
+	border: none;
+	font-size: 14px;
+	border-radius: 24px;
+	padding-top: 2px;
+}
+
+#selling .btn-jual:hover {
+	background-color: #f74141;
+}
+
+#selling .btn-jual:active {
+	background-color: #db3022;
+}
+
+#selling .btn-jual:disabled {
+	opacity: 0.9;
+}
+
+
+@media screen and (max-width: 1024px) {
+  #selling .text-photo {
+    color: #9B9B9B; 
+    font-size: 14px; 
+    margin-top: .5rem;
+    margin-left: 42px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #selling .text-photo {
+    color: #9B9B9B; 
+    font-size: 12px; 
+    margin-top: .5rem;
+    margin-left: 25px;
+  }
+}

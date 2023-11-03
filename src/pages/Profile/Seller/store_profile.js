@@ -107,7 +107,7 @@ function MyProfile(){
                     type="text"
                     name="name"
                   /> */}
-                  <textarea class="px-3 py-2" id="description" rows="5" name="description"></textarea>
+                  <textarea className="px-3 py-2" id="description" rows="5" name="description"></textarea>
                 </div>
                 <div className="col-flexauto" style={{ width: "6%" }}></div>
               </div>

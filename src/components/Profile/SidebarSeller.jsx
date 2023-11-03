@@ -117,9 +117,9 @@ const Sidebar = ({ currentUser, openTab, setOpenTab }) => {
             My order
           </button>
 
-          <button onClick={() => setOpenTab("order_cancel")} className={`sub-menu ${openTab === "order_cancel" ? "fw-semibold" : "text-gray"}`}>
+          {/* <button onClick={() => setOpenTab("order_cancel")} className={`sub-menu ${openTab === "order_cancel" ? "fw-semibold" : "text-gray"}`}>
             Order cancel
-          </button>
+          </button> */}
         </div>
         
 			</div>
