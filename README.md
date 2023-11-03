@@ -8,7 +8,11 @@ Blanja is an e-commerce web application that sells many items and users can sele
 
 
 ## Built With
-
+* React JS
+* Redux Toolkit
+* Html
+* CSS
+* Bootstrap
 
 ## Installation
 
@@ -20,6 +24,6 @@ Blanja is an e-commerce web application that sells many items and users can sele
 ## Related Project
 
 ## Created By
-[Putra Prasetya](https://github.com/putrapr) as Frontend Developer
-[Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer
-[Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer
+* [Putra Prasetya](https://github.com/putrapr) as Frontend Developer
+* [Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer
+* [Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer
