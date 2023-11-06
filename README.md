@@ -50,9 +50,11 @@ This app was built with some technologies below:
 </ol>
 
 ## Authors
-<p>Muhammad Rizky Solehudin</p>
-<p>Abdul Naim</p>
-<p>Putra Prasetya</p>
+<ol>
+ <li>Muhammad Rizky Solehudin</li>
+ <li>Abdul Naim</li>
+ <li>Putra Prasetya</li>
+</ol>
 
  <p align="center">
     <!--  -->
