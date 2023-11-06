@@ -2,8 +2,8 @@
 
 ## About The Project
 <p>
- Blanja was created for people who are interested in making, buying, and selling transactions. If they are interested in becoming sellers,
- they can sell the goods they want here, but if they become customers, they can also browse at once to buy goods sold by sellers.
+ Blanja was created for people who are interested in making, buying, and selling transactions. If users are interested in becoming sellers,
+ users can sell the goods they want here, but if users become customers, users can also browse at once to buy goods sold by sellers.
 </p>
 
 ## Table Of Content
