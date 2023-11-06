@@ -77,6 +77,10 @@ export const loginSellerAction = createAsyncThunk(
 				icon: "success",
 			});
 
+			if (response.data.data) {
+				window.location.reload();
+			}
+
 			return response.data.data;
 		} catch (error) {
 			Swal.fire({
