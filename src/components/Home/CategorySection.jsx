@@ -14,7 +14,7 @@ const CategorySection = ({
         <h1>Category</h1>
         <p>What are you currently looking for</p>
       </div>
-      <div className="category d-flex justify-content-center">
+      <div className="category d-flex justify-content-center flex-wrap">
         {isLoadingCategory ? (
           <Alert type="loading" />
         ) : isErrorCategory ? (

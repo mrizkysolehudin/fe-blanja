@@ -1,3 +1,10 @@
+#product-page {
+  display: flex;
+  flex-direction: column;
+}
+#product-page .nav {
+  margin-top: 7em;
+}
 #product-page .title p {
   color: #9b9b9b;
   font-family: Metropolis;
