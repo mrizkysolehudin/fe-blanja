@@ -106,8 +106,8 @@ const MyOrder = () => {
 															{formatDateDDMMYY(item?.order_data)}
 														</td>
 														<td style={{ padding: 10 }}>{item?.product_name}</td>
-														<td style={{ padding: 10 }}>$ {item?.quantity_unit}</td>
-														<td style={{ padding: 10 }}>{item?.price_unit}</td>
+														<td style={{ padding: 10 }}>{item?.quantity_unit}</td>
+														<td style={{ padding: 10 }}>$ {item?.price_unit}</td>
 														<td style={{ padding: 10 }}>{item?.order_id}</td>
 														<td style={{ padding: 10 }}>{item?.payment_method}</td>
 													</tr>
@@ -259,23 +259,30 @@ const MyOrder = () => {
 									</tr>
 								</thead>
 								<tbody>
-									{/* <tr>
-                    <td style={{ padding: 10 }}>Tanggal berapa?</td>
-                    <td style={{ padding: 10 }}>Nama barang apa?</td>
-                    <td style={{ padding: 10 }}>Jumlah berapa?</td>
-                    <td style={{ padding: 10 }}>Harga berapa?</td>
-                    <td style={{ padding: 10 }}>Order id berapa?</td>
-                    <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
-                  </tr> */}
-
-									{/* Jika data kosong */}
-									<tr>
-										<td colspan="6">
-											<div className="no-data">
-												<img src={svgNoProduct} alt="no-order" />
-											</div>
-										</td>
-									</tr>
+									{dataOrderItems.length > 0 ? (
+										dataOrderItems.map((item, index) => {
+											return (
+												<tr key={index} style={{ fontSize: 12 }}>
+													<td style={{ padding: 10 }}>
+														{formatDateDDMMYY(item?.order_data)}
+													</td>
+													<td style={{ padding: 10 }}>{item?.product_name}</td>
+													<td style={{ padding: 10 }}>{item?.quantity_unit}</td>
+													<td style={{ padding: 10 }}>$ {item?.price_unit}</td>
+													<td style={{ padding: 10 }}>{item?.order_id}</td>
+													<td style={{ padding: 10 }}>{item?.payment_method}</td>
+												</tr>
+											);
+										})
+									) : (
+										<tr>
+											<td colspan="6">
+												<div className="no-data">
+													<img src={svgNoProduct} alt="no-order" />
+												</div>
+											</td>
+										</tr>
+									)}
 								</tbody>
 							</table>
 						</div>
