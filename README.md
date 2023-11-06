@@ -12,6 +12,7 @@
 - [Installation](#Installation)
 - [Screenshot](#Screenshot)
 - [Contributing](#Contributing)
+- [Authors](#Authors)
 
 ### Built With
 
@@ -48,6 +49,10 @@ This app was built with some technologies below:
   <li>Open to pull request</li>
 </ol>
 
+## Authors
+<p>Muhammad Rizky Solehudin</p>
+<p>Abdul Naim</p>
+<p>Putra Prasetya</p>
 
  <p align="center">
     <!--  -->
