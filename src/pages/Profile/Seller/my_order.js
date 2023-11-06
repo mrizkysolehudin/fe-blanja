@@ -11,8 +11,8 @@ const MyOrder = () => {
           <nav>
             <div className="nav nav-underline gap" id="nav-tab" >
               <button className="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-allitems">All items</button>
-              <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-notyetpaid">Not yet paid</button>
-              <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-packed">Packed</button>
+              <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-getpaid">Get paid</button>
+              <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-processed">Processed</button>
               <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-sent">Sent</button>
               <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-completed">Completed</button>
               <button className="nav-link" data-bs-toggle="tab" data-bs-target="#nav-ordercancel">Order cancel</button>
@@ -20,41 +20,226 @@ const MyOrder = () => {
             <hr style={{ marginTop:0 }}/>
           </nav>
           <div className="tab-content" id="nav-tabContent">
-            {/* All Items */}
-            <div className="tab-pane fade show active" id="nav-allitems" role="tabpanel">
+            {/* Tab All items */}
+            <div class="tab-pane fade show active" id="nav-allitems" role="tabpanel">
+              <div className="tab-pane fade show active" id="nav-allitems" role="tabpanel">
+                <div className="input-icons">
+                  <i className="bi bi-search icon"></i>
+                  <input className="input-field" type="text" placeholder="Search"/>
+                </div>
+
+                <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                  <thead>
+                    <tr style={{ width: '100%', height: 60 }}>
+                      <th className="th">Tanggal</th>
+                      <th className="th">Nama barang</th>
+                      <th className="th">Jumlah</th>
+                      <th className="th">Harga</th>
+                      <th className="th">Order id</th>
+                      <th className="th">Metode Pembayaran</th>   
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {/* <tr>
+                      <td style={{ padding: 10 }}>Tanggal berapa?</td>
+                      <td style={{ padding: 10 }}>Nama barang apa?</td>
+                      <td style={{ padding: 10 }}>Jumlah berapa?</td>
+                      <td style={{ padding: 10 }}>Harga berapa?</td>
+                      <td style={{ padding: 10 }}>Order id berapa?</td>
+                      <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
+                    </tr> */}
+
+                    {/* Jika data kosong */}
+                    <tr>
+                      <td colspan="6">
+                        <div className="no-data">
+                          <img src={svgNoProduct} alt="no-order"/>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>                
+              </div>
+            </div>
+
+            {/* Tab Get Paid */}
+            <div class="tab-pane fade" id="nav-getpaid" role="tabpanel">
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th">Tanggal</th>
+                    <th className="th">Nama barang</th>
+                    <th className="th">Jumlah</th>
+                    <th className="th">Harga</th>
+                    <th className="th">Order id</th>
+                    <th className="th">Metode Pembayaran</th>   
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: 10 }}>Tanggal berapa?</td>
+                    <td style={{ padding: 10 }}>Nama barang apa?</td>
+                    <td style={{ padding: 10 }}>Jumlah berapa?</td>
+                    <td style={{ padding: 10 }}>Harga berapa?</td>
+                    <td style={{ padding: 10 }}>Order id berapa?</td>
+                    <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Tab Processed */}
+            <div class="tab-pane fade" id="nav-processed" role="tabpanel">
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th">Tanggal</th>
+                    <th className="th">Nama barang</th>
+                    <th className="th">Jumlah</th>
+                    <th className="th">Harga</th>
+                    <th className="th">Order id</th>
+                    <th className="th">Metode Pembayaran</th>   
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: 10 }}>Tanggal berapa?</td>
+                    <td style={{ padding: 10 }}>Nama barang apa?</td>
+                    <td style={{ padding: 10 }}>Jumlah berapa?</td>
+                    <td style={{ padding: 10 }}>Harga berapa?</td>
+                    <td style={{ padding: 10 }}>Order id berapa?</td>
+                    <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Tab Sent */}
+            <div class="tab-pane fade" id="nav-sent" role="tabpanel">
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th">Tanggal</th>
+                    <th className="th">Nama barang</th>
+                    <th className="th">Jumlah</th>
+                    <th className="th">Harga</th>
+                    <th className="th">Order id</th>
+                    <th className="th">Metode Pembayaran</th>   
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: 10 }}>Tanggal berapa?</td>
+                    <td style={{ padding: 10 }}>Nama barang apa?</td>
+                    <td style={{ padding: 10 }}>Jumlah berapa?</td>
+                    <td style={{ padding: 10 }}>Harga berapa?</td>
+                    <td style={{ padding: 10 }}>Order id berapa?</td>
+                    <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Tab Completed */}
+            <div class="tab-pane fade" id="nav-completed" role="tabpanel">
               <div className="input-icons">
                 <i className="bi bi-search icon"></i>
                 <input className="input-field" type="text" placeholder="Search"/>
               </div>
 
-              <div className="d-flex justify-content-center align-items-center" style={{ width: '100%', height: 340 }}>
-                  <img src={svgNoProduct} alt="no-order"/>
-                </div>
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th">Tanggal</th>
+                    <th className="th">Nama barang</th>
+                    <th className="th">Jumlah</th>
+                    <th className="th">Harga</th>
+                    <th className="th">Order id</th>
+                    <th className="th">Metode Pembayaran</th>   
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: 10 }}>Tanggal berapa?</td>
+                    <td style={{ padding: 10 }}>Nama barang apa?</td>
+                    <td style={{ padding: 10 }}>Jumlah berapa?</td>
+                    <td style={{ padding: 10 }}>Harga berapa?</td>
+                    <td style={{ padding: 10 }}>Order id berapa?</td>
+                    <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            {/* Not yet paid */}
-            <div className="tab-pane fade" id="nav-notyetpaid" role="tabpanel">
-              content Not yet paid
-            </div>
+            {/* Tab Order cancel */}
+            <div class="tab-pane fade" id="nav-ordercancel" role="tabpanel">
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th">Tanggal</th>
+                    <th className="th">Nama barang</th>
+                    <th className="th">Jumlah</th>
+                    <th className="th">Harga</th>
+                    <th className="th">Order id</th>
+                    <th className="th">Metode Pembayaran</th>   
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: 10 }}>Tanggal berapa?</td>
+                    <td style={{ padding: 10 }}>Nama barang apa?</td>
+                    <td style={{ padding: 10 }}>Jumlah berapa?</td>
+                    <td style={{ padding: 10 }}>Harga berapa?</td>
+                    <td style={{ padding: 10 }}>Order id berapa?</td>
+                    <td style={{ padding: 10 }}>Metode pembayaran apa?</td>
+                  </tr> */}
 
-            {/* Packed */}
-            <div className="tab-pane fade" id="nav-packed" role="tabpanel">
-              content Packed
-            </div>
-
-            {/* Sent */}
-            <div className="tab-pane fade" id="nav-sent" role="tabpanel">
-              content Sent
-            </div>
-
-            {/* Completed */}
-            <div className="tab-pane fade" id="nav-completed" role="tabpanel">
-              content Completed
-            </div>
-
-            {/* Order cancel */}
-            <div className="tab-pane fade" id="nav-ordercancel" role="tabpanel">
-              content Order cancel
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

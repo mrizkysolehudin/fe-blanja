@@ -26,28 +26,135 @@ const MyProduct = () => {
                 <input className="input-field" type="text" placeholder="Search"/>
               </div>
 
-              <div style={{ width: '100%', height: 400, border: '1px solid #D4D4D4' }}>
-                <div className="d-flex justify-content-between align-items-center" style={{ width: '100%', height: 60, backgroundColor: '#F6F6F6' }}>
-                  <button style={{ color: '#9B9B9B', border: 0, backgroundColor: 'transparent', marginLeft: 30, fontSize: 14, fontWeight: 'bold' }}>Product name <i className="bi bi-chevron-expand ms-2"></i></button>
-                  <div>
-                    <button style={{ color: '#9B9B9B', border: 0, backgroundColor: 'transparent', fontSize: 14, fontWeight: 'bold' }}>Price <i className="bi bi-chevron-expand ms-2"></i></button>
-                    <button style={{ color: '#9B9B9B', border: 0, backgroundColor: 'transparent', margin: '0 50px', fontSize: 14, fontWeight: 'bold' }}>Stock <i className="bi bi-chevron-expand ms-2"></i></button>
-                  </div>
-                </div>
-                <div className="d-flex justify-content-center align-items-center" style={{ width: '100%', height: 340 }}>
-                  <img src={svgNoProduct} alt="no-order"/>
-                </div>
-              </div>
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th" style={{ width: '60%' }}>
+                      <button className="btn-sort">
+                        Product name <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                    </th>
+                    <th className="th" style={{ width: '20%' }}>
+                      <button className="btn-sort">
+                        Price <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                      </th>
+                    <th className="th" style={{ width: '20%' }}>
+                      <button className="btn-sort">
+                        Stock <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                    </th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: '10px 20px' }}>Tanggal berapa?</td>
+                    <td style={{ padding: '10px 20px' }}>Nama barang apa?</td>
+                    <td style={{ padding: '10px 20px' }}>Jumlah berapa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>     
             </div>
 
             {/* Sold out */}
             <div className="tab-pane fade" id="nav-soldout" role="tabpanel">
-              content Sold out
+              <div className="input-icons">
+                <i className="bi bi-search icon"></i>
+                <input className="input-field" type="text" placeholder="Search"/>
+              </div>
+              
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th" style={{ width: '60%' }}>
+                      <button className="btn-sort">
+                        Product name <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                    </th>
+                    <th className="th" style={{ width: '20%' }}>
+                      <button className="btn-sort">
+                        Price <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                      </th>
+                    <th className="th" style={{ width: '20%' }}>
+                      <button className="btn-sort">
+                        Stock <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                    </th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: '10px 20px' }}>Tanggal berapa?</td>
+                    <td style={{ padding: '10px 20px' }}>Nama barang apa?</td>
+                    <td style={{ padding: '10px 20px' }}>Jumlah berapa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             {/* Archived */}
             <div className="tab-pane fade" id="nav-archived" role="tabpanel">
-              content Archived
+            <div className="input-icons">
+                <i className="bi bi-search icon"></i>
+                <input className="input-field" type="text" placeholder="Search"/>
+              </div>
+              
+              <table class="table" style={{ height: 400, border: '1px solid #D4D4D4' }}>
+                <thead>
+                  <tr style={{ width: '100%', height: 60 }}>
+                    <th className="th" style={{ width: '60%' }}>
+                      <button className="btn-sort">
+                        Product name <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                    </th>
+                    <th className="th" style={{ width: '20%' }}>
+                      <button className="btn-sort">
+                        Price <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                      </th>
+                    <th className="th" style={{ width: '20%' }}>
+                      <button className="btn-sort">
+                        Stock <i className="bi bi-chevron-expand ms-2"></i>
+                      </button>
+                    </th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* <tr>
+                    <td style={{ padding: '10px 20px' }}>Tanggal berapa?</td>
+                    <td style={{ padding: '10px 20px' }}>Nama barang apa?</td>
+                    <td style={{ padding: '10px 20px' }}>Jumlah berapa?</td>
+                  </tr> */}
+
+                  {/* Jika data kosong */}
+                  <tr>
+                    <td colspan="6">
+                      <div className="no-data">
+                        <img src={svgNoProduct} alt="no-order"/>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
