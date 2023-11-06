@@ -2,6 +2,7 @@ import authReducer from "./authSlice";
 import registerCustomerReducer from "./customer/registerCustomerSlice";
 import editCustomerReducer from "./customer/editCustomerSlice";
 import getOneCustomerReducer from "./customer/getOneCustomerSlice";
+import getOneSellerReducer from "./seller/getOneSellerSlice";
 import registerSellerReducer from "./seller/registerSellerSlice";
 import allProductsReducer from "./product/getAllProductsSlice";
 import deleteProductReducer from "./product/deleteProductSlice";
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
 	getOneCustomer: getOneCustomerReducer,
 	editCustomer: editCustomerReducer,
 	registerSeller: registerSellerReducer,
+	getOneSeller: getOneSellerReducer,
 	allProducts: allProductsReducer,
 	allCategories: allCategoriesReducer,
 	deleteProduct: deleteProductReducer,
