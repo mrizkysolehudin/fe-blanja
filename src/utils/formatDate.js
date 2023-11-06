@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export function formatDate(dateString) {
 	const currentDate = new Date();
 	const inputDate = new Date(dateString);
@@ -22,4 +24,10 @@ export function formatDate(dateString) {
 	} else {
 		return "Just now";
 	}
+}
+
+export function formatDateDDMMYY(date) {
+	const formattedDate = moment(date).format("DD-MM-YYYY");
+
+	return formattedDate;
 }
