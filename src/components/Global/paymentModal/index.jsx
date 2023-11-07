@@ -40,7 +40,11 @@ const Payment = ({ orderPrice, totalCost, deliveryCost }) => {
 		};
 
 		checkoutItems?.forEach((val) => {
-			data?.items?.push(val?.product);
+			data?.items?.push({
+				product_id: val?.product?.id,
+				quantity_unit: val?.quantity_unit,
+				price_unit: val?.price_unit,
+			});
 		});
 
 		httpJson()

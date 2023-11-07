@@ -20,6 +20,7 @@ const MyOrder = () => {
 		axios
 			.get(`${baseUrl}/order-items/orderitems-customer/${customer_id}`)
 			.then((response) => {
+				console.log(response);
 				setDataOrderItems(response.data.data);
 			})
 			.catch((error) => {
