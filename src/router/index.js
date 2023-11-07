@@ -31,7 +31,7 @@ const Router = () => {
 						<Route path="/register" element={<RegisterPage />} />
 						<Route path="/search-page" element={<SearchPage />} />
 						<Route path="/product/:id" element={<Product />} />
-						<Route path="/category/:id" element={<CategoryPage />} />
+						<Route path="/category/:categoryId" element={<CategoryPage />} />
 
 						<Route path="*" element={<NotFoundPage />} />
 					</Route>
