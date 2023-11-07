@@ -51,6 +51,12 @@ Blanja is an e-commerce web application that sells many items and users can sele
 		"web-vitals": "^2.1.4"
 ```
 
+## Environment Variables
+
+```bash
+REACT_APP_BACKEND_URL=
+```
+
 ## Installation
 
 Clone the project
