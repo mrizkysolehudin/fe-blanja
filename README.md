@@ -10,11 +10,11 @@ Blanja is an e-commerce web application that sells many items and users can sele
 
 ## Features
 
-- Users can create a store account and a customer account.
-- Users can edit their profile (store or customer).
+- Users can create a seller account and a customer account.
+- Users can edit their profile (seller or customer).
 - Users can browse available products.
-- Store accounts can create product listings for items they are selling.
-- Store accounts can edit and delete products.
+- Seller accounts can create product listings for items they are selling.
+- Seller accounts can edit and delete products.
 
 ## Built With
 
