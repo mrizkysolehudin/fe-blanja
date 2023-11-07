@@ -6,6 +6,7 @@ import "./mybag.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
+	clearCartAction,
 	decrementQuantityAction,
 	incrementQuantityAction,
 	removeFromCartAction,
@@ -22,7 +23,7 @@ const MyBagPage = () => {
 	const handleCheckout = (e) => {
 		e.preventDefault();
 		cartItems.forEach((cartItem) => dispatch(addToCheckoutAction(cartItem)));
-
+		dispatch(clearCartAction());
 		navigate("/checkout");
 	};
 

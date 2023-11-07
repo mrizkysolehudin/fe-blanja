@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 const Checkout = () => {
 	const checkoutItems = useSelector((state) => state.checkout.checkoutItems);
 	const orderPrice = useSelector((state) => state.checkout.totalPrice);
-	const deliveryCost = orderPrice > 1000 ? 20 : 5;
+	const deliveryCost = orderPrice === 0 ? 0 : orderPrice > 1000 ? 20 : 5;
 	const totalCost = orderPrice + deliveryCost;
 
 	return (

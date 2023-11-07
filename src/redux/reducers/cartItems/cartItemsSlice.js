@@ -21,6 +21,10 @@ const cartSlice = createSlice({
 			state.totalPrice +=
 				(action.payload.quantity_unit || 0) * (action.payload.price_unit || 0);
 		},
+		clearCartAction: (state, action) => {
+			state.cartItems = [];
+			state.totalPrice = 0;
+		},
 		removeFromCartAction: (state, action) => {
 			const itemIndex = state.cartItems.findIndex(
 				(item) => item.product_id === action.payload.product_id,
@@ -60,6 +64,7 @@ const cartSlice = createSlice({
 
 export const {
 	addToCartAction,
+	clearCartAction,
 	removeFromCartAction,
 	incrementQuantityAction,
 	decrementQuantityAction,
