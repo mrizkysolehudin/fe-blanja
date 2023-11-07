@@ -8,7 +8,13 @@ Blanja is an e-commerce web application that sells many items and users can sele
 
 <br />
 
-## Feature
+## Features
+
+- Users can create a store account and a customer account.
+- Users can edit their profile (store or customer).
+- Users can browse available products.
+- Store accounts can create product listings for items they are selling.
+- Store accounts can edit and delete products.
 
 ## Built With
 
@@ -47,14 +53,44 @@ Blanja is an e-commerce web application that sells many items and users can sele
 
 ## Installation
 
+Clone the project
+
+```bash
+  git clone https://github.com/mrizkysolehudin/fe-blanja-TeamProject my-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the project
+
+```bash
+  npm start
+```
+
 ## Screenshot
 
-## Demo
+## Authors
+
+💻 [Putra Prasetya](https://github.com/putrapr) as Frontend Developer <br/>
+💻 [Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer <br/>
+💻 [Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer
+
+<br />
 
 ## Related Project
 
-## Created By
+⚡[`Backend Blanja`](https://github.com/mrizkysolehudin/be-blanja-TeamProject)⚡
 
-- [Putra Prasetya](https://github.com/putrapr) as Frontend Developer
-- [Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer
-- [Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer
+⚡[`Frontend Blanja`](https://github.com/mrizkysolehudin/fe-blanja-TeamProject)⚡
+
+⚡[`Demo Blanja`](https://master--blanja-web-team.netlify.app/)⚡
