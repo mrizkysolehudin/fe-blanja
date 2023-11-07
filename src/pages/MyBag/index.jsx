@@ -10,6 +10,8 @@ import {
 	incrementQuantityAction,
 	removeFromCartAction,
 } from "../../redux/reducers/cartItems/cartItemsSlice";
+import NoResult from "../../components/NoResult";
+import { addToCheckoutAction } from "../../redux/reducers/checkout/checkoutSlice";
 
 const MyBagPage = () => {
 	const navigate = useNavigate();
@@ -19,6 +21,8 @@ const MyBagPage = () => {
 
 	const handleCheckout = (e) => {
 		e.preventDefault();
+		cartItems.forEach((cartItem) => dispatch(addToCheckoutAction(cartItem)));
+
 		navigate("/checkout");
 	};
 
@@ -28,6 +32,8 @@ const MyBagPage = () => {
 		}
 		dispatch(decrementQuantityAction(item));
 	};
+
+	console.log(cartItems);
 
 	return (
 		<div>
@@ -44,38 +50,42 @@ const MyBagPage = () => {
 
 						<div className="d-flex flex-row justify-content-between MyOrderHP">
 							<div className="ContentMyOrderHP" style={{ width: "65%" }}>
-								<div className="card mb-3 me-4" style={{ width: "100%" }}>
-									<div className="card-body">
-										<div className="form-check d-flex flex-row justify-content-between">
-											<div className="">
-												<input
+								{cartItems?.length > 0 ? (
+									<div className="card mb-3 me-4" style={{ width: "100%" }}>
+										<div className="card-body">
+											<div className="form-check d-flex flex-row justify-content-between">
+												<div className="">
+													{/* <input
 													className="form-check-input checkBox"
 													type="checkbox"
 													value=""
 													id="flexCheckIndeterminate"
-												/>
-												<label
-													className="form-check-label me-2"
-													for="flexCheckIndeterminate">
-													Select all items
-												</label>
-												<label className="me-2">(2 items Select)</label>
-											</div>
+												/> */}
+													<label
+														className="form-check-label me-2"
+														for="flexCheckIndeterminate">
+														Select all items
+													</label>
+													<label className="me-2">({cartItems?.length} items Select)</label>
+												</div>
 
-											<div className="">
-												<button
-													className="text-danger text-end btn btn-light"
-													style={{
-														textDecoration: "none",
-														text: "end",
-														width: "auto",
-													}}>
-													Delete
-												</button>
+												<div className="">
+													<button
+														className="text-danger text-end btn btn-light"
+														style={{
+															textDecoration: "none",
+															text: "end",
+															width: "auto",
+														}}>
+														Delete
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								) : (
+									<NoResult />
+								)}
 
 								{/* content buy item */}
 
