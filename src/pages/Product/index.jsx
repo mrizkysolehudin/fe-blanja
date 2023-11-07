@@ -7,6 +7,7 @@ import httpJson from "../../helpers/http";
 import { baseUrl } from "../../helpers/baseUrl";
 import { useDispatch } from "react-redux";
 import { addToCartAction } from "../../redux/reducers/cartItems/cartItemsSlice";
+import { addToCheckoutAction } from "../../redux/reducers/checkout/checkoutSlice";
 
 const Product = () => {
 	const { id } = useParams();
@@ -43,23 +44,6 @@ const Product = () => {
 		}
 	};
 
-	// const handleAddToCart = (newItem) => {
-	// 	const existingCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-	// 	const item = {
-	// 		product_id: newItem?.id,
-	// 		quantity_unit: quantity,
-	// 		price_unit: newItem?.price,
-	// 		product: newItem,
-	// 	};
-
-	// 	existingCartItems.push(item);
-
-	// 	localStorage.setItem("cartItems", JSON.stringify(existingCartItems));
-
-	// 	navigate("/mybag");
-	// };
-
 	const handleAddToCart = (newItem) => {
 		const item = {
 			product_id: newItem?.id,
@@ -71,6 +55,18 @@ const Product = () => {
 		dispatch(addToCartAction(item));
 
 		navigate("/mybag");
+	};
+
+	const handleCheckout = (newItem) => {
+		const item = {
+			product_id: newItem?.id,
+			quantity_unit: quantity,
+			price_unit: newItem?.price,
+			product: newItem,
+		};
+
+		dispatch(addToCheckoutAction(item));
+		navigate("/checkout");
 	};
 
 	return (
@@ -194,7 +190,7 @@ const Product = () => {
 									Add Bag
 								</button>
 								<button
-									onClick={() => navigate("/checkout")}
+									onClick={() => handleCheckout(data)}
 									type="button"
 									class="btn btn-danger me-2 flex-grow-1">
 									Buy Now

@@ -33,8 +33,6 @@ const MyBagPage = () => {
 		dispatch(decrementQuantityAction(item));
 	};
 
-	console.log(cartItems);
-
 	return (
 		<div>
 			<Navbar />
