@@ -1,69 +1,102 @@
-<h1 align="center">Blanja Web Application</h1>
+<div align="center">
+ <img height="150" width="250" src="https://github.com/mrizkysolehudin/fe-blanja-TeamProject/blob/master/src/assets/icons/shoppingBag.svg"  />
+</div>
 
-## About The Project
-<p>
- Blanja was created for people who are interested in making, buying, and selling transactions. If users are interested in becoming sellers,
- users can sell the goods they want here, but if users become customers, users can also browse at once to buy goods sold by sellers.
-</p>
+# Blanja Web Application
 
-## Table Of Content
-- [About The Project](#About-The-project)
-- [Built With](#Built-With)
-- [Installation](#Installation)
-- [Screenshot](#Screenshot)
-- [Contributing](#Contributing)
-- [Authors](#Authors)
+Blanja is an e-commerce web application that sells many items and users can select the items they want and then proceed to payment. There is also a seller account for adding and changing products.
 
-### Built With
+<br />
 
-This app was built with some technologies below:
+## Features
 
-- [React Js](https://reactjs.org)
-- [Bootstrap](https://www.npmjs.com/package/bootstrap)
-- [Redux](https://www.npmjs.com/package/redux)
-- [React-redux](https://www.npmjs.com/package/react-redux)
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=id)
-- [Javascript](https://www.javascript.com/)
+- Users can create a seller account and a customer account.
+- Users can edit their profile (seller or customer).
+- Users can browse available products.
+- Seller accounts can create product listings for items they are selling.
+- Seller accounts can edit and delete products.
 
+## Built With
+
+- React JS
+- Bootstrap
+- Redux Toolkit
+
+## Package dependencies
+
+```bash
+		"react": "^18.2.0",
+		"bootstrap": "^5.3.1",
+		"react-quill": "^2.0.0",
+		"react-responsive-carousel": "^3.2.23",
+
+		"sweetalert2": "^11.7.27",
+		"redux-persist": "^6.0.0",
+		"react-redux": "^8.1.2",
+		"@reduxjs/toolkit": "^1.9.5",
+
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"axios": "^1.5.0",
+		"card": "^2.5.4",
+		"jwt-decode": "^3.1.2",
+		"node": "^20.7.0",
+		"react-bootstrap": "^2.9.1",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.15.0",
+		"react-scripts": "5.0.1",
+		"react-svg": "^16.1.26",
+ 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+		"web-vitals": "^2.1.4"
+```
+
+## Environment Variables
+
+```bash
+REACT_APP_BACKEND_URL=
+```
 
 ## Installation
 
-<p>1. Clone this repository</p>
-<pre>git clone https://github.com/abdulnaim/fe-blanja</pre>
-<p>2. Change directory to fe-blanja</p>
-<pre>cd fe-blanja</pre>
-<p>3. Install all of the required modules</p>
-<pre>npm install / npm i</pre>
-<p>4. Run this command to run the server</p>
-<pre>npm run dev</pre>
+Clone the project
+
+```bash
+  git clone https://github.com/mrizkysolehudin/fe-blanja-TeamProject my-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the project
+
+```bash
+  npm start
+```
 
 ## Screenshot
 
-## Contributing
-<p>These contributions are what make the open source community such a great place to learn, and create. Any contribution you make is greatly appreciated.</p>
-<ol>
-  <li>Fork the Project</li>
-  <li>Create your Feature Branch </li>
-  <li>Commit your Changes </li>
-  <li>Push to the Branch </li>
-  <li>Open to pull request</li>
-</ol>
-
 ## Authors
-💻 [Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer <br />
-💻 [Putra Prasetya](https://github.com/putrapr) as Frontend Developer <br />
-💻 [Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer
+
+💻 [Putra Prasetya](https://github.com/putrapr) as Frontend Developer <br/>
+💻 [Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer <br/>
+💻 [Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer
+
+<br />
 
 ## Related Project
 
-⚡[`Backend Blanja`](https://github.com/abdulnaim6/be-blanja-TeamProject)⚡
+⚡[`Backend Blanja`](https://github.com/mrizkysolehudin/be-blanja-TeamProject)⚡
 
-⚡[`Frontend Blanja`](https://github.com/abdulnaim6/fe-blanja)⚡
+⚡[`Frontend Blanja`](https://github.com/mrizkysolehudin/fe-blanja-TeamProject)⚡
 
 ⚡[`Demo Blanja`](https://master--blanja-web-team.netlify.app/)⚡
-
- <p align="center">
-    <!--  -->
- </p>
-
-

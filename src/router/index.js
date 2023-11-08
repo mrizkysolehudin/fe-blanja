@@ -17,28 +17,34 @@ import FilterModal from "../components/Global/FilterModal";
 import MyProducts from "../pages/MyProducts";
 
 const Router = () => {
-  return (
-    <BrowserRouter>
-      <div>
-        <Routes>
-          {/* public routes */}
-          <Route>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-            <Route path="/search-page" element={<SearchPage />} />
-            <Route path="/product/:id" element={<Product />} />
-            <Route path="/category/:id" element={<CategoryPage />} />
-            <Route path="/profile-seller" element={<ProfileSeller />} />
+	const role = localStorage.getItem("role");
+	console.log(role == 0);
 
-            <Route path="*" element={<NotFoundPage />} />
-          </Route>
+	return (
+		<BrowserRouter>
+			<div>
+				<Routes>
+					{/* public routes */}
+					<Route>
+						<Route path="/" element={<HomePage />} />
+						<Route path="/login" element={<LoginPage />} />
+						<Route path="/register" element={<RegisterPage />} />
+						<Route path="/search-page" element={<SearchPage />} />
+						<Route path="/product/:id" element={<Product />} />
+						<Route path="/category/:categoryId" element={<CategoryPage />} />
+
+						<Route path="*" element={<NotFoundPage />} />
+					</Route>
 
 					{/* private routes */}
 					<Route element={<PrivateRoute />}>
 						<Route path="/mybag" element={<MyBagPage />} />
 						<Route path="/checkout" element={<Checkout />} />
-						<Route path="/profile" element={<ProfileCostumer />} />
+						{role == 0 ? (
+							<Route path="/profile" element={<ProfileSeller />} />
+						) : (
+							<Route path="/profile" element={<ProfileCostumer />} />
+						)}
 						<Route path="/my-products" element={<MyProducts />} />
 					</Route>
 				</Routes>
@@ -46,7 +52,6 @@ const Router = () => {
 			</div>
 		</BrowserRouter>
 	);
-
 };
 
 export default Router;

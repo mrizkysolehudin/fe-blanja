@@ -88,29 +88,22 @@ const ProfilePage = () => {
 					openTab={openTab}
 				/>
 
-				{openTab === "my_account" && ( 
-          <MyAccount
-            data={data}
-            isLoading={isLoading}
-            showImage={showImage}
-            handleChangeImage={handleChangeImage}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            image={image}
-          />
+				{openTab === "my_account" && (
+					<MyAccount
+						data={data}
+						isLoading={isLoading}
+						showImage={showImage}
+						handleChangeImage={handleChangeImage}
+						handleChange={handleChange}
+						handleSubmit={handleSubmit}
+						image={image}
+					/>
 				)}
 
-        {openTab === "shipping_address" && (
-          <Address />
-        )}
+				{openTab === "shipping_address" && <Address />}
 
-        {openTab === "my_order" && (
-          <MyOrder />
-        )}
-
+				{openTab === "my_order" && <MyOrder />}
 			</div>
-
-      
 
 			<FilterModal />
 		</div>

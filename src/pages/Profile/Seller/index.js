@@ -10,15 +10,15 @@ import "./index.css";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { getOneCustomerAction } from "../../../redux/reducers/customer/getOneCustomerSlice";
 import { editCustomerAction } from "../../../redux/reducers/customer/editCustomerSlice";
 import FilterModal from "../../../components/Global/FilterModal";
+import { getOneSellerAction } from "../../../redux/reducers/seller/getOneSellerSlice";
 
 const SellerProfile = () => {
 	const navigate = useNavigate();
 	const id = localStorage.getItem("user_id");
 	const dispatch = useDispatch();
-	const currentUser = useSelector((state) => state.getOneCustomer.data);
+	const currentUser = useSelector((state) => state.getOneSeller.data);
 	const { isLoading, isEdited } = useSelector((state) => state.editCustomer);
 
 	const [openTab, setOpenTab] = useState("store_profile");
@@ -33,7 +33,7 @@ const SellerProfile = () => {
 
 	useEffect(() => {
 		if (id) {
-			dispatch(getOneCustomerAction(id));
+			dispatch(getOneSellerAction(id));
 		}
 
 		if (isEdited) {
@@ -47,10 +47,10 @@ const SellerProfile = () => {
 			setShowImage(currentUser.photo);
 
 			setData({
-				name: currentUser.name,
+				store_name: currentUser.store_name,
 				email: currentUser.email,
 				phone: currentUser.phone,
-				gender: currentUser.gender,
+				store_description: currentUser.store_description,
 			});
 		}
 	}, [dispatch, currentUser]);
@@ -90,28 +90,29 @@ const SellerProfile = () => {
 					openTab={openTab}
 				/>
 
-        {/* <TestOrder /> */}
+				{/* <TestOrder /> */}
 
-        {(openTab === "store_profile" || openTab === "store") && (
-          <StoreProfile />
-        )}
+				{(openTab === "store_profile" || openTab === "store") && (
+					<StoreProfile
+						data={data}
+						isLoading={isLoading}
+						showImage={showImage}
+						handleChangeImage={handleChangeImage}
+						handleChange={handleChange}
+						handleSubmit={handleSubmit}
+						image={image}
+					/>
+				)}
 
-        {(openTab === "my_products" || openTab === "product") && (
-          <MyProduct />
-        )}
+				{(openTab === "my_products" || openTab === "product") && <MyProduct />}
 
-        {openTab === "selling" && (
-          <SellingProduct />
-        )}
+				{openTab === "selling" && <SellingProduct />}
 
-        {(openTab === "my_order" || openTab === "order") && (
-          <MyOrder />
-        )}
+				{(openTab === "my_order" || openTab === "order") && <MyOrder />}
 
-        {/* {openTab === "order_cancel" && (
+				{/* {openTab === "order_cancel" && (
           <OrderProfile/>
         )} */}
-
 			</div>
 
 			<FilterModal />

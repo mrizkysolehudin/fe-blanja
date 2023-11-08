@@ -1,46 +1,46 @@
 #bag-page .text-start {
-	color: var(--Black, #222);
-	font-family: Metropolis;
-	font-size: 34px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	margin-bottom: 5%;
+  color: var(--Black, #222);
+  font-family: Metropolis;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 5%;
 }
 #bag-page .form-check-label {
-	color: #000;
-	font-family: Metropolis;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 24px; /* 150% */
+  color: #000;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
 }
 #bag-page .me-5 h4 {
-	color: #000;
-	font-family: Metropolis;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: 24px; /* 150% */
+  color: #000;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
 }
 #bag-page .price {
-	color: #222;
-	font-family: Metropolis;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
+  color: #222;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 #bag-page .total {
-	color: #9b9b9b;
-	font-family: Metropolis;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
+  color: #9b9b9b;
+  font-family: Metropolis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 #bag-page .btn {
-	width: 200px;
-	height: 36px;
-	flex-shrink: 0;
+  width: 300px;
+  height: 36px;
+  flex-shrink: 0;
 }
