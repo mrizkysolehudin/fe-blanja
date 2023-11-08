@@ -50,11 +50,17 @@ This app was built with some technologies below:
 </ol>
 
 ## Authors
-<ol>
- <li>Muhammad Rizky Solehudin</li>
- <li>Abdul Naim</li>
- <li>Putra Prasetya</li>
-</ol>
+💻 [Muchammad Rizky Solehudin](https://github.com/mrizkysolehudin) as Fullstack Developer <br />
+💻 [Putra Prasetya](https://github.com/putrapr) as Frontend Developer <br />
+💻 [Abdul Naim](https://github.com/abdulnaim6) as Frontend Developer
+
+## Related Project
+
+⚡[`Backend Blanja`](https://github.com/abdulnaim6/be-blanja-TeamProject)⚡
+
+⚡[`Frontend Blanja`](https://github.com/abdulnaim6/fe-blanja)⚡
+
+⚡[`Demo Blanja`](https://master--blanja-web-team.netlify.app/)⚡
 
  <p align="center">
     <!--  -->
