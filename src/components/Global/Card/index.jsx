@@ -5,11 +5,8 @@ import { Link } from "react-router-dom";
 
 const Card = ({ item = { image: "" } }) => {
   return (
-    <div className="row g-4">
-      <div
-        className="content col-lg-3 col-md-4 col-sm-6"
-        style={{ marginLeft: "6%" }}
-      >
+    <div id="card">
+      <div className="content " style={{ marginLeft: "6%" }}>
         <div className="card h-100">
           <Link to={`/product/${item?.id}`} className="stretched-link"></Link>
 
