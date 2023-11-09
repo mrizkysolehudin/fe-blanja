@@ -84,6 +84,11 @@ Start the project
 ```
 
 ## Screenshot
+Costumer
+| Login Page | Register Page |
+|------------|---------------|
+|![Login Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(0).png) | ![Register Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(1).png)| 
+
 
 ## Authors
 
