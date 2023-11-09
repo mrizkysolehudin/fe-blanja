@@ -59,7 +59,7 @@ const MyProducts = () => {
 											style={{ height: "65%", position: "relative", borderRadius: 10 }}>
 											<img
 												src={item?.image}
-												alt={item?.name}
+												alt={item?.product_name}
 												style={{
 													objectFit: "contain",
 													height: "100%",
