@@ -16,6 +16,8 @@ function Selling() {
 	const [showImage, setShowImage] = useState("");
 	const [description, setDescription] = useState("");
 
+	console.log(description);
+
 	const handleChange = (e) => {
 		setData({
 			...data,
@@ -141,18 +143,17 @@ function Selling() {
 				</div>
 
 				<div className="row" style={{ margin: "0 2rem" }}>
-					<label for="name" className="form-label labeling">
-						Stock
-					</label>
+					<label className="form-label labeling">Stock</label>
 					<div className="px-0 d-flex gap-5">
 						<div className="form-check">
 							<input
 								className="form-check-input"
 								type="radio"
 								name="condition"
-								id="baru"
+								id="new"
+								onChange={handleChange}
 								value="new"
-								checked
+								checked={data.condition === "new"}
 							/>
 							<label className="form-check-label labeling" for="baru">
 								Baru
@@ -163,8 +164,10 @@ function Selling() {
 								className="form-check-input"
 								type="radio"
 								name="condition"
-								id="bekas"
+								id="second"
+								onChange={handleChange}
 								value="second"
+								checked={data.condition === "second"}
 							/>
 							<label className="form-check-label labeling" for="bekas">
 								Bekas
@@ -228,15 +231,28 @@ function Selling() {
 					</div>
 				</div>
 				{/* Input */}
-				<div style={{ height: 300, margin: ".7rem 2rem" }}>
+				<div style={{ height: 300, margin: ".7rem 2rem", position: "relative" }}>
 					<ReactQuill
 						theme="snow"
 						name="description"
 						type="text"
-						onChange={(value) => setDescription(value)}
-						value={description}
-						style={{ height: 200 }}
+						// onChange={(value) => setDescription(value)}
+						// value={description}
+						style={{ height: 200, zIndex: 0 }}
 					/>
+
+					<textarea
+						onChange={(e) => setDescription(e.target.value)}
+						value={description}
+						style={{
+							height: 200,
+							width: 730,
+							marginTop: -159,
+							zIndex: 1,
+							position: "absolute",
+							outlineWidth: 0.2,
+							outlineColor: "gray",
+						}}></textarea>
 				</div>
 			</div>
 
