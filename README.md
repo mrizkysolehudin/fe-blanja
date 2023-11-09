@@ -84,6 +84,53 @@ Start the project
 ```
 
 ## Screenshot
+Costumer
+| Login Page | Register Page |
+|------------|---------------|
+|![Login Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(0).png) | ![Register Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(1).png)|  
+
+| Home Page | Detail Product Page |
+|------------|---------------|
+|![Home Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(2).png) | ![Detail Product Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(4).png)|  
+
+|Category Page | My Bag Page |
+|------------|---------------|
+|![Category Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(3).png) | ![My Bag Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(5).png)|  
+
+| Checkout Page | Address Modal |
+|------------|---------------|
+|![Checkout Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(6).png) | ![Address Modal](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(7).png)|  
+
+| Add Address Modal | Payment Modal |
+|------------|---------------|
+|![Add Address Modal](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(8).png) | ![Payment Modal](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(9).png)|  
+
+| My Profile Page | My Address Page |
+|------------|---------------|
+|![My Profile Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(10).png) | ![My Address Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(11).png)|  
+
+| My Order Page |
+|------------|
+|![My Order Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(12).png)  
+
+Seller
+| Login Page | Register Page |
+|------------|---------------|
+|![Login Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(0).png) | ![Register Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(1).png)|  
+
+| My Profile Page | My Product Page |
+|------------|---------------|
+|![My Profile Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(2).png) | ![My Product](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(3).png)|  
+
+| Selling Product Page | My Order Page |
+|------------|---------------|
+|![Selling Product Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(4).png) | ![My Order Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(5).png)|  
+
+| My Product (Visual) Page |
+|------------|
+|![My Order Page](https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(6).png)  
+
+
 
 ## Authors
 
