@@ -128,10 +128,9 @@ Seller
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | ![Selling Product Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(4)1.png>) | ![My Order Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(5)1.png>) |
 
-| My Product (Visual) Page |
-| ------------------------ |
-
-|![My Order Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(6).png>)
+| My Product (Visual) Page                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------ |
+| ![My Order Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(6).png>) |
 
 ## Authors
 
