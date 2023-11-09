@@ -85,7 +85,7 @@ Start the project
 
 ## Screenshot
 
-Costumer
+⚡Costumer⚡
 | Login Page | Register Page |
 |------------|---------------|
 |![Login Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(0).png>) | ![Register Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(1).png>)|
@@ -110,12 +110,11 @@ Costumer
 | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | ![My Profile Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(10).png>) | ![My Address Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(11).png>) |
 
-| My Order Page |
-| ------------- |
+| My Order Page                                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------------------------- |
+| ![My Order Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(12).png>) |
 
-|![My Order Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/costumer/Blanja-Web-App%20(12).png>)
-
-Seller
+⚡Seller⚡
 | Login Page | Register Page |
 |------------|---------------|
 |![Login Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(0).png>) | ![Register Page](<https://github.com/putrapr/fe-blanja/blob/master/src/assets/img/screenshot/seller/Blanja-Web-App%20(1).png>)|
