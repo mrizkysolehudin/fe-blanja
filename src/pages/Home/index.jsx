@@ -11,37 +11,35 @@ import { getAllProductsAction } from "../../redux/reducers/product/getAllProduct
 import { getAllCategoriesAction } from "../../redux/reducers/category/getAllCategoriesSlice";
 
 const HomePage = () => {
-  const dispatch = useDispatch();
-  const { data, isLoading, isError } = useSelector(
-    (state) => state.allProducts
-  );
-  const {
-    data: dataCategories,
-    isLoadingCategory,
-    isErrorCategory,
-  } = useSelector((state) => state.allCategories);
+	const dispatch = useDispatch();
+	const { data, isLoading, isError } = useSelector((state) => state.allProducts);
+	const {
+		data: dataCategories,
+		isLoadingCategory,
+		isErrorCategory,
+	} = useSelector((state) => state.allCategories);
 
-  useEffect(() => {
-    dispatch(getAllProductsAction(""));
-    dispatch(getAllCategoriesAction());
-  }, [dispatch]);
+	useEffect(() => {
+		dispatch(getAllProductsAction(""));
+		dispatch(getAllCategoriesAction());
+	}, [dispatch]);
 
-  return (
-    <section>
-      <Navbar />
+	return (
+		<section className="pb-5">
+			<Navbar />
 
-      <CarouselSection />
-      <CategorySection
-        dataCategories={dataCategories}
-        isLoadingCategory={isLoadingCategory}
-        isErrorCategory={isErrorCategory}
-      />
-      <NewSection data={data} isLoading={isLoading} isError={isError} />
-      <PopularSection data={data} isLoading={isLoading} isError={isError} />
+			<CarouselSection />
+			<CategorySection
+				dataCategories={dataCategories}
+				isLoadingCategory={isLoadingCategory}
+				isErrorCategory={isErrorCategory}
+			/>
+			<NewSection data={data} isLoading={isLoading} isError={isError} />
+			<PopularSection data={data} isLoading={isLoading} isError={isError} />
 
-      <FilterModal />
-    </section>
-  );
+			<FilterModal />
+		</section>
+	);
 };
 
 export default HomePage;
