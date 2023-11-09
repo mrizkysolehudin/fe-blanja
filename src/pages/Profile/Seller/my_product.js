@@ -97,7 +97,7 @@ const MyProduct = () => {
 										data?.map((item, index) => (
 											<tr>
 												<td style={{ padding: "10px 20px" }}>{item?.product_name}</td>
-												<td style={{ padding: "10px 20px" }}>{item?.price}</td>
+												<td style={{ padding: "10px 20px" }}>$ {item?.price}</td>
 												<td style={{ padding: "10px 20px" }}>{item?.stock}</td>
 											</tr>
 										))
