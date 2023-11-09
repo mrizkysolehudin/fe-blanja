@@ -52,7 +52,7 @@ const MyBagPage = () => {
 								{cartItems?.length > 0 ? (
 									<div className="card mb-3 me-4" style={{ width: "100%" }}>
 										<div className="card-body">
-											<div className="form-check d-flex flex-row justify-content-between">
+											<div className="form-check d-flex flex-row justify-content-between align-items-center">
 												<div className="">
 													{/* <input
 													className="form-check-input checkBox"
@@ -174,7 +174,7 @@ const MyBagPage = () => {
 									: ""}
 							</div>
 
-							<div className="card cardCost" style={{ width: "30%" }}>
+							<div className="card cardCost" style={{ width: "30%", height: 170 }}>
 								<div className="card-body">
 									<h6>Shopping summary</h6>
 									<div
@@ -186,7 +186,7 @@ const MyBagPage = () => {
 									<button
 										onClick={(e) => handleCheckout(e)}
 										type="button"
-										class="btn btn-danger BtnCheckOut">
+										class="btn btn-danger mt-2 BtnCheckOut">
 										Buy
 									</button>
 								</div>
