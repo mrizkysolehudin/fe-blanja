@@ -136,12 +136,12 @@ const Product = () => {
 
 							<div className="price mt-4">
 								<p className="my-0">Price</p>
-								<h1>$ {data?.price}</h1>
+								<h1 className="mt-1">$ {data?.price}</h1>
 							</div>
 
 							<div className="color mt-4">
 								<p className="my-0">Color</p>
-								<select class="form-select" aria-label="Default select example">
+								<select class="form-select mt-2" aria-label="Default select example">
 									<option selected>Select Color</option>
 									<option value="1">White</option>
 									<option value="2">Black</option>
@@ -150,7 +150,7 @@ const Product = () => {
 							</div>
 
 							<div className="size mt-4 d-flex" id="amount">
-								<div className="d-flex flex-column" style={{ marginRight: "80px" }}>
+								{/* <div className="d-flex flex-column" style={{ marginRight: "80px" }}>
 									<p>Size</p>
 									<div>
 										<button type="button" className="btn btn-dark">
@@ -161,7 +161,8 @@ const Product = () => {
 											+
 										</button>
 									</div>
-								</div>
+								</div> */}
+
 								<div className="d-flex flex-column">
 									<p>Jumlah</p>
 									<div>
@@ -236,7 +237,7 @@ const Product = () => {
 					</div>
 				</div>
 				<div
-					className="content row mt-5"
+					className="content row mt-3 mb-5"
 					style={{ marginRight: "20%", width: 250 }}>
 					<Card item={data} />
 				</div>
